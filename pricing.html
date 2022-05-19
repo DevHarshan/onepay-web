@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+  <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+  <title>Onepay</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icon Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v8.0",
+      });
+    };
+
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+
+  <!-- Your Chat Plugin code -->
+  <div
+    class="fb-customerchat"
+    attribution="setup_tool"
+    page_id="695949390851250"
+    theme_color="#67b868"
+  ></div>
+
+	<script>  
+		$(document).ready(function() {  
+			$.ajax({  
+				url: 'https://merchant-api-live-v2.onepay.lk/api/package/get_package_details/?',  
+			
+				type: 'GET',  
+		
+				dataType: 'json',  
+
+				success: function(data, textStatus, xhr) {  
+				
+					var sub_id=$("#sub");
+
+		count=0;
+		max=0			
+		for( j=0; j<data['data'].length;j++)
+		{
+
+			if (data['data'][j].package_assigned_item_data.length > count) {
+
+				count = data['data'][j].package_assigned_item_data.length;
+
+				}
+			
+
+		}
+
+		height_value=640	
+		name=""	
+		
+
+		$.each(data['data'], function(i, suscription){
+			var inner_items = ""
+			console.log(suscription,"count")
+			
+			// count = 
+
+
+			if(suscription.name=="Standard")
+			{
+				name="(Payment processing fee is 3.60%)"
+			}else if(suscription.name=="Essential"){
+				name="(Payment processing fee is 3.25%)"
+			}else if(suscription.name=="Elevate"){
+				name="(Payment processing fee is 2.75%)"
+			}else if(suscription.name=="Premier"){
+				name="(Payment processing fee is 2.5%)"
+			}else{
+				name=""
+			}			
+
+
+			// for ( x = 0; x< count; x++) {
+				
+			// 		if (suscription.package_assigned_item_data[x] != null) {
+			// 			inner_items += ('<div  class="pb-1 d-flex"><i style="color:#2CC780" class="pr-2 fa fa-check"></i>'+
+			// 	'<p class="subscriptionDetails">'+suscription.package_assigned_item_data[x].item_id__name+'</p></div>')
+			// 		} else {
+			// 			inner_items += ('<p  style="color:white;margin:0;line-height:40px">.</p>')
+			// 		}
+			// }
+			$.each(suscription.package_assigned_item_data, function(i, suscription){
+
+			inner_items += ('<div  class="pb-3 d-flex"><i style="color:#2CC780" class="pe-2 fa fa-check"></i>'+
+				'<p class="subscriptionDetails">'+suscription.visualize_name+'</p></div>')
+			}); 
+
+amount=""
+if(suscription.package_budget_data[0].net_amount==0.00)
+{
+	amount="FREE"
+}
+else{
+	amount="LKR "+suscription.package_budget_data[0].net_amount
+}
+
+			sub_id.append('<div  class="pb-lg-0 pb-md-5 pb-5 col-lg-3 col-md-6 col-12">'+
+		'<div class="subscriptionCards subCardHeight d-flex align-items-center flex-column" style="padding: 30px;">'+
+		'<div class="mb-auto">'+
+			'<p id="subName" class="subscriptionCardsHeader">'+suscription.name+
+		
+			
+			'</p>'+
+			'<span class="subscriptionDetailsFee"> '+name+'<span>'+
+
+			'<hr/>'+
+
+			'<p class="subscriptionPickFrom">Pick from</p>'+
+
+			'<div style="align-items: center;" class="">'+
+				'<p class="pe-1 subscriptionAmount"">'+amount+'</p>'+
+				'<p class="subscriptionPickFrom text-right">/Month</p>'+
+
+			'</div>'+
+			'<hr/>'+
+				'<div id="sub_inner">'+
+			
+				inner_items +
+			'</div>'+
+		'</div>'+
+
+		'<div >'+
+		
+		'</div>'+
+			'<div  style="align-self:center">'+
+				'<a class="d-flex justify-content-center" style="text-decoration:none" href="./contactus.html"><button  class="subscriptionButton"><span style="padding-left:25px; padding-right: 25px;" class="d-flex justify-content-between"><span>Apply</span> <i  class="pt-1 text-right pe-2 fa fa-chevron-right"></i></span></button></a>'+
+			'</div>'+
+
+
+		'</div>'+
+
+		'</div>');
+
+
+
+		});   
+
+
+
+
+
+	
+				},  
+				error: function(xhr, textStatus, errorThrown) {  
+					console.log('Error in Database');  
+
+					
+				}  
+			});  
+		});  
+	</script>
+
+
+  <!--nav bar-->
+  <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
+    <div class="container">
+      <a class="navbar-brand custom-nav__modify-logo" href="index.html">
+        <img src="./assets/Images/onepay-logo.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav-item-custom" href="consumer.html"> <img src="./assets/SVG/Add_apps_perspective_matte 1.svg"
+                class="nav-image-align" alt=""> For Consumer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg" class="nav-image-align"
+                alt=""> For Business</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
+          <li class="nav-item nav-item-align">
+            <a class="nav-link nav-item-custom " aria-current="page" href="index.html">Home</a>
+          </li>
+
+          <li class="nav-item nav-item-align">
+            <a class="nav-link nav-item-custom active-page" href="pricing.html">Pricing</a>
+          </li>
+
+          <li class="nav-item nav-item-align">
+            <a class="nav-link nav-item-custom" href="aboutus.html">About us</a>
+          </li>
+
+          <li class="nav-item nav-item-align">
+            <a class="nav-link nav-item-custom" href="contactus.html">Contact us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <section class="container home-1-banner main-banner bg-img bg-6" id="home">
+
+	<div class="p-lg-5 p-3">
+	<h2 class="subcriphead">Scale as you grow your business.
+  </h2>
+
+	<div id="sub" style="padding-top: 50px;" class="row">
+
+
+
+
+
+
+
+
+
+
+		<!-- <div class="pb-lg-0 pb-md-0 pb-5 col-lg-3 col-md-3 col-12">
+			<div class="subscriptionCards" style="padding: 30px;">
+				<p class="subscriptionCardsHeader">Our Subscription Plans</p>
+	
+				<hr/>
+	
+				<p class="subscriptionPickFrom">Pick from</p>
+	
+				<div style="align-items: center;" class="d-flex">
+					<p class="pr-2 subscriptionAmount">Free</p>
+					<p style="align-self: center;" class="subscriptionPickFrom">/Month</p>
+	
+				</div>
+	
+				<hr/>
+	
+				<div class="d-flex">
+					<i style="color:#2CC780" class="pr-2 fa fa-check"></i>
+					<p class="subscriptionDetails">Lorem Ipsum</p>
+	
+				</div>
+	
+	
+	
+				<div>
+					<button class="subscriptionButton"><span style="padding-left:25px; padding-right: 25px;" class="d-flex justify-content-between"><span>Apply</span> <i  class="pt-1 text-right pr-2 fa fa-chevron-right"></i></span></button>
+				</div>
+	
+	
+			</div>
+	
+			</div> -->
+
+
+
+
+	</div>
+</div>
+
+</section>
+
+
+
+
+
+
+
+<section class="about s-padding4">
+
+ 
+  <div class="container p-lg-5 p-3">
+    <h2 class="subcriphead pb-5">Below-par nominal fees across all plans</h2>
+  <div class="row pb-3">
+    <div  class="pb-lg-0 pb-md-5 pb-5 col-lg-6 col-md-6 col-12">
+<div style="background-color: white;box-shadow:4px 4px 84px rgba(44, 199, 128, 0.15);" class="otherCharges p-3">
+  
+  <p id="subName" class="subscriptionCardsHeader">Setup Fees</p>
+  <hr/>
+        <p style="line-height: 1.75;">A payment of Rs. 1,500 is to be made upon successful approval of the required documents by the bank.</p>
+</div>
+    </div>
+
+    <div  class="pb-lg-0 pb-md-5 pb-5 col-lg-6 col-md-6 col-12">
+      <div style="background-color: white;box-shadow:4px 4px 84px rgba(44, 199, 128, 0.15);" class="otherCharges p-3">
+          
+        <p id="subName" class="subscriptionCardsHeader">Premium Card - Brand Fee</p>
+        <hr/>
+        
+        <p style="line-height: 1.75;">American Express, Discover & Diners Club, or any other premium cards will be subjected to an additional fee above the standard Payment Processing Fees, as follows;</p>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="d-flex pb-2">
+          <i style="color:#2CC780" class="pe-2 fa fa-check"></i>
+          <p class="subscriptionDetails">Standard Plan 3.6%</p>
+  
+        </div>
+      </div>
+        <div class="col-lg-6 col-md-6 col-12">
+          <div class="d-flex pb-2">
+            <i style="color:#2CC780" class="pe-2 fa fa-check"></i>
+            <p class="subscriptionDetails">Essential Plan 3.5%</p>
+    
+          </div>
+        </div>
+
+
+     
+
+    </div>
+        
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-12">
+
+
+      <div class="d-flex pb-2">
+        <i style="color:#2CC780" class="pe-2 fa fa-check"></i>
+        <p class="subscriptionDetails">Elevate plan 3.5%</p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <div class="col-lg-6 col-md-6 col-12">
+
+
+
+      <div class="d-flex pb-2">
+        <i style="color:#2CC780" class="pe-2 fa fa-check"></i>
+        <p class="subscriptionDetails">Premier plan 3.5%</p>
+
+      </div>
+
+
+
+    </div>
+
+
+       
+
+    
+
+        </div>
+
+
+
+        </div>
+  </div>
+  </div>
+
+
+    <div class="row">
+          <div     class="pb-lg-0 pb-md-5 pb-5  col-lg-6 col-md-6 col-12">
+          <div style="background-color: white;box-shadow:4px 4px 84px rgba(44, 199, 128, 0.15);" class="otherCharges p-3">
+            <p id="subName" class="subscriptionCardsHeader">Cross-Border Foreign Currency Fees</p>
+            <hr/>
+            
+            <p style="line-height: 1.75;">Foreign inward payments will be subjected to an additional fee of 1.5% above the standard payment processing fee of your active plan. Such payments will be converted at the prevailing exchange rate and settled in LKR.</p>
+          </div>
+        </div>
+
+
+        <div   class="pb-lg-0 pb-md-5 pb-5  col-lg-6 col-md-6 col-12">
+      <div style="background-color: white;box-shadow:4px 4px 84px rgba(44, 199, 128, 0.15);" class="otherCharges p-3">
+        <p id="subName" class="subscriptionCardsHeader">Lanka QR </p>
+        <hr/>
+        
+        <p style="line-height: 1.75;">Lanka QR payments will be subjected to only 0.5% of a transaction fee across all plans.</p>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+      <div class="container footer__top">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                  <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
+                  <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri Lanka.</p>
+
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                  <h3 class="footer__links_heading">Links</h3>
+                  <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
+                  <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
+                  <div><a href="/merchant_terms.pdf" download class="footer_a_tag">Merchant Terms & Conditions</a></div>
+                  <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                  <h3 class="footer__links_heading">Contact us</h3>
+                  <p class="footer__paragraph">410/22, <br> Galle Road,
+                      <br>
+                      Colombo 03. </p>
+                      <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 11 7 021 540</a>
+              </div>
+              <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                  <h3 class="footer__links_heading">Download</h3>
+                  <div class="footer-logo-section">
+                      <div>
+                        <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`" src="./assets/SVG/download-apple.svg" alt="appstore-download">
+                        <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`" src="./assets/SVG/download-google.svg" alt="playstore-download">
+                        <img
+                          style="width: 119px; height: auto; margin: 7px 0;"
+                          onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`" 
+                          src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
+                      </div>
+
+                      <ul class="footer-socialmedia">
+                          <li class="footer-socialmedia__item">
+                              <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                                      src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+                          </li>
+                          <li class="footer-socialmedia__item">
+                              <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                                      src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+                          </li>
+                          <li class="footer-socialmedia__item">
+                              <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
+                                      alt="socialmedia-logo"></a>
+                          </li>
+                          <li class="footer-socialmedia__item">
+                              <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
+                                      src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+
+      <div class="footer__copyright_text">
+          <div class="footer__horizontal_line"></div>
+          <p class="footer__copyrigh_paragraph">© 2022 Copyright by Onepay. All rights reserved.</p>
+      </div>
+  </footer>
+    
+    
+      <!-- Optional JavaScript; choose one of the two! -->
+    
+      <!-- Option 1: Bootstrap Bundle with Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+        <script>
+                $('.slider-main').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 4,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+            });
+    
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 10) {
+                    $('.custom-nav__modify').addClass('floatingNav');
+                } else {
+                    $('.custom-nav__modify').removeClass('floatingNav');
+                }
+            });
+        </script>
+      <!-- Option 2: Separate Popper and Bootstrap JS -->
+      <!--
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        -->
+    </body>
+    
+    </html>

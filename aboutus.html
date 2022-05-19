@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <title>Onepay - About Us</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+          integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: "v8.0",
+        });
+        };
+
+        (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+        class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="695949390851250"
+        theme_color="#67b868"
+    ></div>
+
+
+<!--nav bar-->
+<nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
+    <div class="container">
+        <a class="navbar-brand custom-nav__modify-logo" href="index.html">
+            <img src="./assets/Images/onepay-logo.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="consumer.html"> <img
+                            src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
+                        Consumer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg"
+                                                                                  class="nav-image-align" alt=""> For
+                        Business</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
+                <li class="nav-item nav-item-align">
+                    <a class="nav-link nav-item-custom" aria-current="page" href="index.html">Home</a>
+                </li>
+
+
+                <li class="nav-item nav-item-align">
+                    <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
+                </li>
+
+                <li class="nav-item nav-item-align">
+                    <a class="nav-link nav-item-custom active-page" href="aboutus.html">About us</a>
+                </li>
+
+                <li class="nav-item nav-item-align">
+                    <a class="nav-link nav-item-custom" href="contactus.html">Contact us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- <section class="about-header-section"></section> -->
+<section class="about-img-section">
+    <div class="container">
+        <div class="row">
+            <img src="./assets/Images/team_updated.jpg" alt="team-img" class="img-fluid about__img">
+        </div>
+    </div>
+</section>
+
+<section class="ceo-msg-section">
+    <div class="container">
+        <h3 class="ceo-msg__title">Message From CEO 📃</h3>
+        <p class="ceo-msg__para">We work as hard as possible to make your lives easier.</p>
+        <div class="row">
+            <div class="col-md-5">
+                <img src="./assets/Images/min/pp.jpg" alt="ceo-img" class="img-fluid ceo-mg__img">
+            </div>
+            <div class="col-md-7 ceo-msg-breaker">
+                <h3 class="ceo-msg__name">Mr. Amila Fernando</h3>
+                <p class="ceo-msg__description">Design creates culture. Culture shapes values. Values determine the
+                    future.”
+                    — Robert L. Peters, Graphic Designerm</p>
+                <p class="ceo-msg__info">Amila Fernando brings in his visionary leadership, alongside 7 years of work
+                    experience with startups, marketing and business development in Japan. He
+                    was able to build a strong academic foundation for future innovations with
+                    the education he received from Nihon University College of Commerce in
+                    Japan. While he was an undergraduate, he has worked in the food and
+                    beverage industry gaining experience in handling innovative software
+                    services.
+                </p>
+                <p class="ceo-msg__info">Onepay was an idea put forth as a solution for a current social issue of
+                    having to go to a bank to make the payments manually. With the global
+                    pandemic, it was vital to maintain social distance. However, it has been
+                    quite a challenge in Sri Lanka to follow the protocol due to a lot of difficulties
+                    and issues in the current social system. Hence, the introduction of Onepay
+                    to help you with contactless payment making lives easier today and
+                    tomorrow.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- <div class="ceo-list-section">
+    <div class="container">
+        <h3 class="ceo-list-title">Our Team 😍</h3>
+    </div>
+    <div class="row ceo-list-row slider-main-contact">
+         <div class="ceo-list-card">
+             <img src="./assets/Images/ceo-1.png" alt="ceo-img" class="ceo-list__img img-fluid">
+             <div class="ceo-list__body">
+                 <p class="ceo-list__position">CEO</p>
+                 <h3 class="ceo-list__name">John kabras</h3>
+             </div>
+         </div>
+         <div class="ceo-list-card">
+            <img src="./assets/Images/ceo-2.png" alt="ceo-img" class="ceo-list__img img-fluid">
+            <div class="ceo-list__body">
+                <p class="ceo-list__position">CEO</p>
+                <h3 class="ceo-list__name">John kabras</h3>
+            </div>
+        </div>
+        <div class="ceo-list-card">
+            <img src="./assets/Images/ceo-3.png" alt="ceo-img" class="ceo-list__img img-fluid">
+            <div class="ceo-list__body">
+                <p class="ceo-list__position">CEO</p>
+                <h3 class="ceo-list__name">John kabras</h3>
+            </div>
+        </div>
+        <div class="ceo-list-card">
+            <img src="./assets/Images/ceo-4.png" alt="ceo-img" class="ceo-list__img img-fluid">
+            <div class="ceo-list__body">
+                <p class="ceo-list__position">CEO</p>
+                <h3 class="ceo-list__name">John kabras</h3>
+            </div>
+        </div>
+        <div class="ceo-list-card">
+            <img src="./assets/Images/ceo-1.png" alt="ceo-img" class="ceo-list__img img-fluid">
+            <div class="ceo-list__body">
+                <p class="ceo-list__position">CEO</p>
+                <h3 class="ceo-list__name">John kabras</h3>
+            </div>
+        </div>
+        <div class="ceo-list-card">
+            <img src="./assets/Images/ceo-2.png" alt="ceo-img" class="ceo-list__img img-fluid">
+            <div class="ceo-list__body">
+                <p class="ceo-list__position">CEO</p>
+                <h3 class="ceo-list__name">John kabras</h3>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="container footer__top">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
+                <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company
+                    incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by
+                    Central Bank of Sri Lanka.</p>
+
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                <h3 class="footer__links_heading">Links</h3>
+                <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
+                <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
+                <div><a href="/merchant_terms.pdf" download class="footer_a_tag">Merchant Terms & Conditions</a></div>
+                <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                <h3 class="footer__links_heading">Contact us</h3>
+                <p class="footer__paragraph">410/22, <br> Galle Road,
+                    <br>
+                    Colombo 03. </p>
+                <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 11 7 021 540</a>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                <h3 class="footer__links_heading">Download</h3>
+                <div class="footer-logo-section">
+                    <div>
+                        <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`"
+                             src="./assets/SVG/download-apple.svg" alt="appstore-download">
+                        <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`"
+                             src="./assets/SVG/download-google.svg" alt="playstore-download">
+                        <img
+                                style="width: 119px; height: auto; margin: 7px 0;"
+                                onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`"
+                                src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download"/>
+                    </div>
+
+                    <ul class="footer-socialmedia">
+                        <li class="footer-socialmedia__item">
+                            <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+                        </li>
+                        <li class="footer-socialmedia__item">
+                            <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+                        </li>
+                        <li class="footer-socialmedia__item">
+                            <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/twitter.png"
+                                    alt="socialmedia-logo"></a>
+                        </li>
+                        <li class="footer-socialmedia__item">
+                            <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk"
+                               class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer__copyright_text">
+        <div class="footer__horizontal_line"></div>
+        <p class="footer__copyrigh_paragraph">© 2022 Copyright by Onepay. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    $('.slider-main-contact').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 10) {
+            $('.custom-nav__modify').addClass('floatingNav');
+        } else {
+            $('.custom-nav__modify').removeClass('floatingNav');
+        }
+    });
+</script>
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+</body>
+
+</html>

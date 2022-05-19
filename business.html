@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <title>Onepay - Business Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: "v8.0",
+        });
+        };
+
+        (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+        class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="695949390851250"
+        theme_color="#67b868"
+    ></div>
+    
+    <!-- <script>
+        $(document).ready(function() {
+            var a = document.getElementById('app_url');
+            var a1 = document.getElementById('app_url1');
+            var a2 = document.getElementById('app_url2');
+            var a3 = document.getElementById('app_url3');
+            var a4 = document.getElementById('app_url4');
+            
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      
+          // Windows Phone must come first because its UA also contains "Android"
+          if (/windows phone/i.test(userAgent)) {
+
+            a.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a1.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a2.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a3.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a4.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+              return "Windows Phone";
+          }
+      
+          if (/android/i.test(userAgent)) {
+            a.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a1.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a2.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a3.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a4.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+              return "Android";
+          }
+      
+          // iOS detection from: http://stackoverflow.com/a/9039885/177710
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+
+          a.href = "https://apps.apple.com/lk/app/onepay-for-business/id1506128161";
+          a1.href = "https://apps.apple.com/lk/app/onepay-for-business/id1506128161";
+          a2.href = "https://apps.apple.com/lk/app/onepay-for-business/id1506128161";
+          a3.href = "https://apps.apple.com/lk/app/onepay-for-business/id1506128161";
+          a4.href = "https://apps.apple.com/lk/app/onepay-for-business/id1506128161";
+
+              return "iOS";
+          }
+
+            
+          a.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a1.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a2.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a3.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          a4.href = "https://play.google.com/store/apps/details?id=lk.onepay.merchant.android";
+          return "unknown";
+        });  
+      </script> -->
+    <!--nav bar-->
+
+    <!--nav bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
+        <div class="container">
+            <a class="navbar-brand custom-nav__modify-logo" href="index.html">
+                <img src="./assets/Images/onepay-logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-custom" href="consumer.html"> <img
+                                src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
+                            Consumer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-custom active-page" href="business.html"><img src="./assets/SVG/consumer.svg"
+                                class="nav-image-align" alt=""> For Business</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" aria-current="page" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
+                      </li>
+                      
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="aboutus.html">About us</a>
+                    </li>
+
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="contactus.html">Contact us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT PAGE HEADER SECTION -->
+    <section class="business-header">
+        <div class="container">
+            <div class="row text-center">
+                <h1 class="business-header__title">Scale your business <br> effortlessly 🖐</h1>
+                <p class="business-header__para">Bringing the customer closer to your brand! </p>  
+                <div class="d-flex align-items-center justify-content-center">
+                    <a href="./contactus.html" class="business-header__link">Become a Onepay Merchant<span class="business-header__link-arrow"><img
+                        src="./assets/SVG/right-btn-arrow.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="business-dashboard d-flex justify-content-center">
+        <div class="container">
+            <div class="row">
+                <img src="./assets/Images/dashboard2.png" alt="dashboard-img img-fluid">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pathmarchant-section">
+        <div class="container">
+            <h2 class="pathmarchant__title">Let your customers engage with your brand, beyond boundaries 👇</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="pathmarchant-card">
+                        <p class="pathmarchant-card__number pathmarchant-card__number-1">1</p>
+                        <div class="pathmarchant-card__description">
+                            <h3 class="pathmarchant-card__description-title">Application</h3>
+                            <p class="pathmarchant-card__description-para">Fill in the application and send it to us.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="pathmarchant-card">
+                        <p class="pathmarchant-card__number pathmarchant-card__number-2">2</p>
+                        <div class="pathmarchant-card__description">
+                            <h3 class="pathmarchant-card__description-title">Processing</h3>
+                            <p class="pathmarchant-card__description-para">Our team will evaluate the details provided and will get in touch with you for further verifications</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="pathmarchant-card">
+                        <p class="pathmarchant-card__number pathmarchant-card__number-3">3</p>
+                        <div class="pathmarchant-card__description">
+                            <h3 class="pathmarchant-card__description-title">Merchant Visit</h3>
+                            <p class="pathmarchant-card__description-para">Upon the approval of compliance documents, Onepay team will visit your business location to provide technical guidance including setting-up the QR Payment facility and get the physical signatures, if required.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-md-6 mb-4">
+                    <div class="pathmarchant-card">
+                        <p class="pathmarchant-card__number pathmarchant-card__number-4">4</p>
+                        <div class="pathmarchant-card__description">
+                            <h3 class="pathmarchant-card__description-title"> Get the QR</h3>
+                            <p class="pathmarchant-card__description-para">Congratulations you are now a member of the Onepay family! Now, you
+                                will be able to experience a cashless and effortless payment system with the
+                                unique QR code that we provide for you.</p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <section class="statics-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 statics-breaker d-flex justify-content-center">
+                    <div class="statics-card">
+                        <h3 class="statics-card__title">1000+</h3>
+                        <p class="statics-card__para">Merchants</p>
+                    </div>
+                </div>
+                <div class="col-md-3 statics-breaker d-flex justify-content-center">
+                    <div class="statics-card">
+                        <h3 class="statics-card__title">10+</h3>
+                        <p class="statics-card__para">Saved Payment Methods</p>
+                    </div>
+                </div>
+                <div class="col-md-3 statics-breaker d-flex justify-content-center">
+                    <div class="statics-card">
+                        <h3 class="statics-card__title">5</h3>
+                        <p class="statics-card__para">Banking Partnerships</p>
+                    </div>
+                </div>
+                <div class="col-md-3 statics-breaker d-flex justify-content-center">
+                    <div class="statics-card">
+                        <h3 class="statics-card__title">ISO 27001</h3>
+                        <p class="statics-card__para">Certified</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="links-section">
+        <div class="container">
+            <div class="row">
+                <h3 class="links-section__title">Accept payments on your business website, app or <br>  through links</h3>
+                <img src="./assets/Images/man-woman.png" alt="man-women" class="img-fluid links-section__img">
+            </div>
+        </div>
+    </section>
+
+    <section class="consumer-feature-section">
+        <div class="container">
+            <h3 class="consumer-feature__header">Benefits of using Onepay <img
+                src="./assets/SVG/emoji2.svg" class="consumer-feature__emoji" alt="emoji"></h3>
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 consumer-feature-section__first-col">
+                    <h3 class="consumer-feature__title">Merchant Mobile</h3>
+                    <p class="consumer-feature__para">We provide an exclusive mobile application for our merchants which
+                        facilitates to generate QR codes, track your transaction history details and
+                        request payments from your customers.</p>
+                    <div class="top-space btn-center-sm">
+                        <a id="app_url" href="https://linktr.ee/onepaysl" class="btn-common">Download Onepay Merchant
+                            <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker consumer-feature__second-col">
+                    <img src="./assets/Images/min/business-1.png" alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 d-flex justify-content-start align-items-center consumer-feature__second-col consumer-feature-breaker">
+                    <img src="./assets/Images/min/business-2.png " alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+                <div class="col-md-6 consumer-feature-section__first-col ">
+                    <h3 class="consumer-feature__title">Accept QR payments</h3>
+                    <p class="consumer-feature__para">Onepay has partnered with Lanka QR which allows it to accept any QR
+                        payment from any payment app in the market that is powered by Lanka QR.</p>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 consumer-feature-section__first-col">
+                    <h3 class="consumer-feature__title">Merchant Admin Panel</h3>
+                    <p class="consumer-feature__para">All the merchants will receive a separate admin panel. This platform allows
+                        you to track the day-to-day business transactions, sales and expenses
+                        reports with charts while generating QR’s to request payments from the
+                        consumers among many other functions.</p>
+                    <div class="top-space btn-center-sm">
+                        <a href="./contactus.html" class="btn-common">Become a Onepay Merchant
+                            <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker  consumer-feature__second-col">
+                    <img src="./assets/Images/min/business-3.png" alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 d-flex justify-content-start align-items-center consumer-feature__second-col consumer-feature-breaker">
+                    <img src="./assets/Images/min/api-2.png " alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+                <div class="col-md-6 consumer-feature-section__first-col ">
+                    <h3 class="consumer-feature__title">Our API Dcoumentation</h3>
+                    <p class="consumer-feature__para">You can use our API to access onepay IPG API endpoints, which can do transaction on various paltforms.
+                        We have language binding in Shell! You can view code examples in the dark area to the right.</p>
+
+                        <div class="top-space btn-center-sm">
+                            <a href="https://developer.onepay.lk/#introduction" target="_blank" class="btn-common">View API Docs
+                                <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                            </a>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pricing-plan-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pricing-plan-bg">
+                        <h3 class="pricing-plan__title">Run Your Business Your Way</h3>
+                        <p class="pricing-plan__para">No setup fees. No hidden fees or contracts.
+                            Affordable & flexible service plans that will perfectly fit your business.</p>
+        
+                        <div class="d-flex justify-content-center">
+                            <a href="./pricing.html" class="question-content__link">View Pricing Plans</a>
+                        </div>
+                    </div>    
+                </div>            
+            </div>
+        </div>
+    </section>
+    
+    <section class="plugin-section">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-6">
+                    <h3 class="plugin__title">Onepay E-commerce plugins and hosted platforms</h3>
+                    <p class="plugin__para">Onepay offers payment plugins and host sites for several E-commerce
+                        platforms to collect online payments from the customers on your website via
+                        the Paytm payment gateway. It makes the payment collection process
+                        easier for your E-commerce business without writing a single code.</p>
+<!-- 
+                        <div class="top-space btn-center-sm">
+                            <a href="https://developer.onepay.lk/#introduction" target="_blank" class="btn-common">Check Developer guide 
+                                <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">                         
+                            </a>
+                            
+                        </div> -->
+
+                </div>
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="./assets/SVG/integrations.svg" alt="integrations-img" class="plugin__img img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="common-faq-section">
+        <div class="container">
+            <h3 class="common-faq__title">FAQs</h3>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="faq-scroll">
+                        <div class="px-3">
+                            <div class="common-accordion" id="accordionExample">
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingOne">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Who can connect with One Pay services? 
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Any small, medium and large-scale business entitities and professional service providers can easily access the Onepay payment gateway at a nominal setup cost. Please read Application Process on how to apply. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingTwo">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            What's the cost to integrate the payment gateway to my business?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            A nominal rate of Rs. 1,500 is applied when setting-up your Onepay business account and a recurrent subscription fee based on the plan you select. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingThree">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Can I scale my packages as my business grows? 
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Ofcourse. You have the flexibility to switch between packages as you deem fit for your business.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingfour">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                            What currency payments can be made through the Onepay payment gateway?  
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefour" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingfour"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            As of now, LKR and USD payments are accepted.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingfive">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                            What are the payment methods available on Onepay?
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefive" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingfive"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Debit/Credit Payments (VISA, Mastercard, AMEX, Diner's Club & Discover), Mobile wallet payments (Ez Cash & mCash) and Internet Banking payment methods are currently available. More methods will follow with future developments.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingsix">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapssix" aria-expanded="true" aria-controls="collapseOne">
+                                            Do I have to have a website?
+                                        </button>
+                                    </h2>
+                                    <div id="collapssix" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingsix"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Not necessarily. You can use the Onepay Pay Link method to collect payments from your customers without a website.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingseven">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseTwo">
+                                            Does One Pay offer Automated payments or Tokenization?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseseven" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingseven"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Yes. We do support Automated payments (tokenization) & manage the Pre-approvals for you.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingeight">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseThree">
+                                            How long does it take for me to receive the funds to my account?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseeight" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingeight"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            All payments are settled every 2 working days. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingThree">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What technologies will be used to develop a software product?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                            until the collapse plugin adds the appropriate classes that we use to style each
+                                            element. These classes control the overall appearance, as well as the showing and
+                                            hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                            our default variables. It's also worth noting that just about any HTML can go within
+                                            the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingThree">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What are your product development process steps?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                            until the collapse plugin adds the appropriate classes that we use to style each
+                                            element. These classes control the overall appearance, as well as the showing and
+                                            hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                            our default variables. It's also worth noting that just about any HTML can go within
+                                            the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5 d-flex align-items-center justify-content-center">
+                    <div class="question-content">
+                        <img src="./assets/SVG/faq-telephone.svg" alt="telephone-img" class="question-content__img">
+                        <h3 class="question-content__title">Have more questions?</h3>
+                        <p class="question-content__para">Let us know and our experts will get in touch with you ASAP.</p>
+                        <a href="tel:+94 11 7 021 540" class="question-content__link">Talk to our experts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-plan-section payment-journey">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pricing-plan-bg">
+                        <h3 class="pricing-plan__title">Ready to embark on your payments journey?</h3>
+                        <p class="pricing-plan__para">Create an account and start accepting payments <br> instantly.</p>
+        
+                        <div class="d-flex justify-content-center">
+                            <a href="./contactus.html" class="btn-common">Become a Onepay Merchant
+                                <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                            </a>
+                        </div>
+                    </div>    
+                </div>            
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container footer__top">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                    <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
+                    <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri Lanka.</p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Links</h3>
+                    <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
+                    <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
+                    <div><a href="/merchant_terms.pdf" download class="footer_a_tag">Merchant Terms & Conditions</a></div>
+                    <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Contact us</h3>
+                    <p class="footer__paragraph">410/22, <br> Galle Road,
+                        <br>
+                        Colombo 03. </p>
+                        <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 11 7 021 540</a>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Download</h3>
+                    <div class="footer-logo-section">
+                        <div>
+                            <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`" src="./assets/SVG/download-apple.svg" alt="appstore-download">
+                            <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`" src="./assets/SVG/download-google.svg" alt="playstore-download">
+                            <img
+                                style="width: 119px; height: auto; margin: 7px 0;"
+                                onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`" 
+                                src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
+                        </div>
+
+                        <ul class="footer-socialmedia">
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
+                                        alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer__copyright_text">
+            <div class="footer__horizontal_line"></div>
+            <p class="footer__copyrigh_paragraph">© 2022 Copyright by Onepay. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <title>Onepay - Consumer</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: "v8.0",
+        });
+        };
+
+        (function (d, s, id) {
+        var js,
+            fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        })(document, "script", "facebook-jssdk");
+    </script>
+
+    <!-- Your Chat Plugin code -->
+    <div
+        class="fb-customerchat"
+        attribution="setup_tool"
+        page_id="695949390851250"
+        theme_color="#67b868"
+    ></div>
+
+    <!-- <script>
+        $(document).ready(function() {
+            var a = document.getElementById('app_url');
+            var a1 = document.getElementById('app_url1');
+            var a2 = document.getElementById('app_url2');
+            var a3 = document.getElementById('app_url3');
+            var a4 = document.getElementById('app_url4');
+            
+          var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      
+          // Windows Phone must come first because its UA also contains "Android"
+          if (/windows phone/i.test(userAgent)) {
+
+          a.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a1.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a2.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a3.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a4.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+              return "Windows Phone";
+          }
+      
+          if (/android/i.test(userAgent)) {
+            a.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a1.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a2.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a3.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a4.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+              return "Android";
+          }
+      
+          // iOS detection from: http://stackoverflow.com/a/9039885/177710
+          if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+
+          a.href = "https://apps.apple.com/jp/app/onepay/id1499761738";
+          a1.href = "https://apps.apple.com/jp/app/onepay/id1499761738";
+          a2.href = "https://apps.apple.com/jp/app/onepay/id1499761738";
+          a3.href = "https://apps.apple.com/jp/app/onepay/id1499761738";
+          a4.href = "https://apps.apple.com/jp/app/onepay/id1499761738";
+
+              return "iOS";
+          }
+
+            
+          a.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a1.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a2.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a3.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          a4.href = "https://play.google.com/store/apps/details?id=lk.onepay.android";
+          return "unknown";
+        });  
+      </script> -->
+    <!--nav bar-->
+
+    <!--nav bar-->
+
+    <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
+        <div class="container">
+            <a class="navbar-brand custom-nav__modify-logo" href="index.html">
+                <img src="./assets/Images/onepay-logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-custom active-page" href="consumer.html"> <img
+                                src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
+                            Consumer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg"
+                                class="nav-image-align" alt=""> For Business</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" aria-current="page" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
+                      </li>
+
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="aboutus.html">About us</a>
+                    </li>
+
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="contactus.html">Contact us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <section class="consumer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h1 class="consumer-section__header-title">Literally the only payment <br>app you need!.<span><img
+                                src="./assets/SVG/emoji2.svg" alt="emoji"></span></h1>
+                    <p class="consumer-section__header-paragraph">With all lifestyle payments at your finger tips.</p>
+
+                    <a id="app_url" href="https://linktr.ee/onepaysl" class="consumer-main__btn">Download the App
+                        <img src="./assets/SVG/consumer-android.svg" alt="android-logo"
+                            class="consumber-main__btn-logo1">
+                        <img src="./assets/SVG/apple.svg" alt="apple-logo" class="consumber-main__btn-logo2">
+                        <img src="./assets/SVG/huawei.svg" alt="huawei-logo" class="consumber-main__btn-logo3">
+                    </a>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center consumer-section-breaker">
+                    <img src="./assets/Images/min/consumer.png" alt="phone-img" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="consumer-bil-section">
+        <div class="container">
+            <h2 class="consumer-bil__heading">Recharge & Pay Bills on Onepay</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/utility.svg" alt="utility-icon" class="bill-card__img">
+                        <p class="bill-card__text">Utility Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/finance.svg" alt="finance-icon" class="bill-card__img">
+                        <p class="bill-card__text">Finance/Leasing Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/telephone.svg" alt="telephone-icon" class="bill-card__img">
+                        <p class="bill-card__text">Mobile Reloads / Bill Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/insurance.svg" alt="insurance-icon" class="bill-card__img">
+                        <p class="bill-card__text">Insurance Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/television.svg" alt="television-icon" class="bill-card__img">
+                        <p class="bill-card__text">Television Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/government.svg" alt="government-icon" class="bill-card__img">
+                        <p class="bill-card__text">Govement Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/healthcare.svg" alt="healthcare-icon" class="bill-card__img">
+                        <p class="bill-card__text">Healthcare Payments</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/transf.png" alt="healthcare-icon" class="bill-card__img">
+                        <p class="bill-card__text">Fund Transfers</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-sm-12 mb-4">
+                    <div class="bill-card">
+                        <img src="./assets/SVG/credit.svg" alt="healthcare-icon" class="bill-card__img">
+                        <p class="bill-card__text">Credit Card Payments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="consumer-feature-section">
+        <div class="container">
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 consumer-feature-section__first-col">
+                    <h3 class="consumer-feature__title">All lifestyle payments in <br>one go</h3>
+                    <p class="consumer-feature__para">How many times a month, do you have to go to some place or the other and wait in the line to make a utility payment, a credit card payment or even a simple municipality tax? Onepay takes away your pain, as it now allows you to make all your lifestyle payments in one-go from the comfort of your home.
+
+                        Transform now! Enjoy the convenience.  
+                        </p>
+                    <div class="top-space btn-center-sm">
+                        <a id="app_url1" href="https://linktr.ee/onepaysl" class="btn-common">Download the App
+                            <img src="./assets/SVG/apple.svg" alt="apple-logo" class="btn-common__logo2">
+                            <img src="./assets/SVG/consumer-android.svg" alt="android-logo" class="btn-common__logo1">
+                            <img src="./assets/SVG/huawei.svg" alt="huawei-logo" class="consumber-main__btn-logo3">
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker consumer-feature__second-col">
+                    <img src="./assets/Images/min/consumer-1.png" alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 d-flex justify-content-start align-items-center consumer-feature__second-col consumer-feature-breaker">
+                    <img src="./assets/Images/min/consumer-2.png" alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+                <div class="col-md-6 consumer-feature-section__first-col  ">
+                    <h3 class="consumer-feature__title">A Digital Wallet of <br> your own</h3>
+                    <p class="consumer-feature__para">Connect all your bank accounts and debit/credits cards to create your own digital wallet and perform transactions seamlessly. All your financial instruments in one platform to let you perform your lifestyle payments as you wish.
+
+                        Connectivity, optimized!
+                        </p>
+                    <div class="top-space btn-center-sm">
+                        <a id="app_url2" href="https://linktr.ee/onepaysl" class="btn-common">Download the App
+                            <img src="./assets/SVG/apple.svg" alt="apple-logo" class="btn-common__logo2">
+                            <img src="./assets/SVG/consumer-android.svg" alt="android-logo" class="btn-common__logo1">
+                            <img src="./assets/SVG/huawei.svg" alt="huawei-logo" class="consumber-main__btn-logo3">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center consumer-feature-gap">
+                <div class="col-md-6 consumer-feature-section__first-col">
+                    <h3 class="consumer-feature__title">Top-notch Security <br>& Safety</h3>
+                    <p class="consumer-feature__para">With the guided supervision of the Central Bank of Sri Lanka, ISO 27,001 certification and our brilliant team of developers along with the most secure technology available in the industry, you have absolutely no worry about getting started.  
+                        Welcome the difference. Get connected now.
+                        </p>
+                    <div class="top-space btn-center-sm">
+                        <a id="app_url3" href="https://linktr.ee/onepaysl" class="btn-common">Download the App
+                            <img src="./assets/SVG/apple.svg" alt="apple-logo" class="btn-common__logo2">
+                            <img src="./assets/SVG/consumer-android.svg" alt="android-logo" class="btn-common__logo1">
+                            <img src="./assets/SVG/huawei.svg" alt="huawei-logo" class="consumber-main__btn-logo3">
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker  consumer-feature__second-col">
+                    <img src="./assets/Images/min/consumer-3.png" alt="feature-img"
+                        class="consumer-feature__img img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="consumer-benefit-section">
+        <div class="container">
+            <div class="consumer-benefit-content">
+                <h3 class="consumer-benefit__title">Benefits & Features</h3>
+                <p class="consumer-benefit__para">All aspects of Onepay are optimized to offer a branchless, digital and
+                    an
+                    over-all convenient lifestyle and banking <br> experience, whenever – wherever!</p>
+                <div class="top-space btn-center-sm">
+                    <a id="app_url4" href="https://linktr.ee/onepaysl" class="btn-common">Download the App
+                        <img src="./assets/SVG/apple.svg" alt="apple-logo" class="btn-common__logo2">
+                        <img src="./assets/SVG/consumer-android.svg" alt="android-logo" class="btn-common__logo1">
+                        <img src="./assets/SVG/huawei.svg" alt="huawei-logo" class="consumber-main__btn-logo3">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="common-faq-section">
+        <div class="container">
+            <h3 class="common-faq__title">Frequently Asked Questions</h3>
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="faq-scroll">
+                        <div class="px-3">
+                            <div class="common-accordion" id="accordionExample">
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingOne">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            What are the payment options that I have on the Onepay App?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            With our latest update, you can access Online Bank transfers and Credit card payments in addition to our pre-existing platform to make almost all essential lifestyle payments such as Telephone Bills & Reloads, Insurance, Healthcare, Utility payments and many more.  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingTwo">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            How do I make payments? 
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Once you download the Onepay App and register with us, you are able to connect multiple bank accounts and/or VISA/Mastercards seamlessly and create your own Onepay wallet. 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingThree">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Is there a maximum transaction limit?  
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Yes. The maximum limit is Rs. 25,000 per transaction on the app, subject to limitations on your card which may override the limit, if it is lower. However, QR payments allows upto Rs. 5 million per transaction.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingfour">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                            Is there a surcharge for utility providers, in addition to general transaction fees?  
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefour" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingfour"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Yes, and these are conditions applied by the service providers. 
+ 
+                                            [Ceylon Electricity Board]
+                                            Less than Rs. 200		-	Rs. 10.00
+                                            Between Rs. 200 - 1,000 	-	Rs. 15.00
+                                            Rs.1,000 & above 		-	Rs. 20.00
+                                            
+                                            [National Water Supply and Drainage Board (NWSDB)]	-	Rs 20.
+                                            
+                                            [Tax payments - Pradeshiya Saba]
+                                            Less than Rs. 1,000		-	Rs. 15.00
+                                            Between Rs. 1,000 - 5,000 	-	Rs. 20.00
+                                            Between Rs. 5,000- 10,000	-	Rs. 50.00
+                                            Rs. 10,000 & above		-	Rs. 90.00
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingfive">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                            How can I access my transaction data? 
+                                        </button>
+                                    </h2>
+                                    <div id="collapsefive" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingfive"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            Your transaction history will be shown on your Onepay mobile app and/or web under History.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingsix">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapssix" aria-expanded="true" aria-controls="collapseOne">
+                                            Are there any hidden charges/fees involved? 
+                                        </button>
+                                    </h2>
+                                    <div id="collapssix" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingsix"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            All charges will be transparent and you’ll be notified/displayed all charges prior to performing the transaction.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingseven">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseTwo">
+                                            Is Onepay free to set up?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseseven" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingseven"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                          Yes, it is absolutely free for registration for both users and merchants.
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingeight">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseThree">
+                                            What are the card types that I can store under my Onepay
+                                            account?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseeight" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingeight"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                          You will be able to use any Sri Lankan Visa, Master or Amex card, that is enabled for online use by your card issuing bank. At the launch of onepay we are coming with current and saving bank accounts only.
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingThree">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What technologies will be used to develop a software product?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                            until the collapse plugin adds the appropriate classes that we use to style each
+                                            element. These classes control the overall appearance, as well as the showing and
+                                            hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                            our default variables. It's also worth noting that just about any HTML can go within
+                                            the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- <div class="common-accordion-item">
+                                    <h2 class="common-accordion-header" id="headingThree">
+                                        <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            What are your product development process steps?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="common-accordion-body">
+                                            <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                                            until the collapse plugin adds the appropriate classes that we use to style each
+                                            element. These classes control the overall appearance, as well as the showing and
+                                            hiding via CSS transitions. You can modify any of this with custom CSS or overriding
+                                            our default variables. It's also worth noting that just about any HTML can go within
+                                            the <code>.accordion-body</code>, though the transition does limit overflow.
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-5 d-flex align-items-center justify-content-center">
+                    <div class="question-content">
+                        <img src="./assets/SVG/faq-telephone.svg" alt="telephone-img" class="question-content__img">
+                        <h3 class="question-content__title">Have more questions?</h3>
+                        <p class="question-content__para">Let us know and our experts will get in touch with you ASAP.</p>
+                        <a href="tel:+94 11 7 021 540" class="question-content__link">Talk to our experts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <div class="news-section">
+       <div class="container">
+           <h3 class="news-sec-title">Onepay Latest News</h3>
+       </div>
+       <div class="row news-card-row slider-main">
+        <div class="news-card">
+            <img src="./assets/Images/min/image_29be2a5fed.jpg" alt="news-img" class="news-card__img">
+            <div class="news-card__body">
+                <p  class="news-card__para">Onepay becomes Sri Lanka’s first payment gateway to be ISO-certified</p>
+                <div class="news-card__btn">
+                    <a href="https://www.ft.lk/financial-services/Onepay-becomes-Sri-Lanka-s-first-payment-gateway-to-be-ISO-certified/42-731325"  class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="./assets/Images/Onepay-PG-Logo.png" alt="news-img" class="news-card__img">
+            <div class="news-card__body">
+                <p  class="news-card__para">Onepay becomes Sri Lanka’s first payment gateway to be ISO-certified</p>
+                <div class="news-card__btn">
+                    <a href="https://island.lk/onepay-becomes-sri-lankas-first-payment-gateway-to-be-iso-certified/"  class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="./assets/Images/min/26-Spemai.jpg" alt="news-img" class="news-card__img">
+            <div class="news-card__body">
+                <p  class="news-card__para">Spemai launches Onepay payment gateway</p>
+                <div class="news-card__btn">
+                    <a href="http://www.sundayobserver.lk/2021/08/29/business/spemai-launches-onepay-payment-gateway"  class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="./assets/Images/news-img-4.png" alt="news-img" class="news-card__img">
+            <div class="news-card__body">
+                <p  class="news-card__para">SL startup acquires Japanese investment, launches Onepay payment gateway</p>
+                <div class="news-card__btn">
+                    <a href="https://island.lk/sl-startup-acquires-japanese-investment-launches-onepay-payment-gateway/"  class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="./assets/Images/min/token.jpg" alt="news-img" class="news-card__img">
+            <div class="news-card__body">
+                <p  class="news-card__para">Onepay receives an honorary token of appreciation</p>
+                <div class="news-card__btn">
+                    <a href="https://www.facebook.com/watch/?v=3378866198871479"  class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+                </div>
+            </div>
+        </div>
+        <div class="news-card">
+            <img src="./assets/Images/min/hnb.jpg" alt="news-img" class="news-card__img">
+            <div class="news-card__body">
+                <p  class="news-card__para">HNB partners with Onepay expanding e-commerce solution for SME’s</p>
+                <div class="news-card__btn">
+                    <a href="https://www.hnb.net/media-center/2022/hnb-partners-with-onepay-expanding-e-commerce-solution-for-sme%E2%80%99s?fbclid=IwAR0qMyCVq0Wu8U1m24axDb_gPl1LB3XpIGSkpqCQkT27pMyKdNrB75oN4AI"  class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+                </div>
+            </div>
+        </div>
+   </div>
+   </div>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container footer__top">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                    <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
+                    <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri Lanka.</p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Links</h3>
+                    <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
+                    <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
+                    <div><a href="/merchant_terms.pdf" download class="footer_a_tag">Merchant Terms & Conditions</a></div>
+                    <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Contact us</h3>
+                    <p class="footer__paragraph">410/22, <br> Galle Road,
+                        <br>
+                        Colombo 03. </p>
+                        <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 11 7 021 540</a>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Download</h3>
+                    <div class="footer-logo-section">
+                        <div>
+                            <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`" src="./assets/SVG/download-apple.svg" alt="appstore-download">
+                            <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`" src="./assets/SVG/download-google.svg" alt="playstore-download">
+                            <img
+                                style="width: 119px; height: auto; margin: 7px 0;"
+                                onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`" 
+                                src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
+                        </div>
+
+                        <ul class="footer-socialmedia">
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
+                                        alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer__copyright_text">
+            <div class="footer__horizontal_line"></div>
+            <p class="footer__copyrigh_paragraph">© 2022 Copyright by Onepay. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+                $('.slider-main').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 4,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                autoplay: true,
+                responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+            });
+
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > 10) {
+                    $('.custom-nav__modify').addClass('floatingNav');
+                } else {
+                    $('.custom-nav__modify').removeClass('floatingNav');
+                }
+            });
+        </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
