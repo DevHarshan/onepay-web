@@ -2,374 +2,467 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
-  <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-  <title>Onepay - Contact Us</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+    <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+    <title>Onepay - Contact Us</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-  <!-- Font Awesome Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-  <!-- Load Facebook SDK for JavaScript -->
-  <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: "v8.0",
-      });
-    };
 
-    (function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    })(document, "script", "facebook-jssdk");
-  </script>
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+          window.fbAsyncInit = function () {
+            FB.init({
+              xfbml: true,
+              version: "v8.0",
+            });
+          };
+    
+          (function (d, s, id) {
+            var js,
+              fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+            fjs.parentNode.insertBefore(js, fjs);
+          })(document, "script", "facebook-jssdk");
+        </script>
+    
+        <!-- Your Chat Plugin code -->
+        <div
+          class="fb-customerchat"
+          attribution="setup_tool"
+          page_id="695949390851250"
+          theme_color="#67b868"
+        ></div>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
 
-  <!-- Your Chat Plugin code -->
-  <div class="fb-customerchat" attribution="setup_tool" page_id="695949390851250" theme_color="#67b868"></div>
+    <!--nav bar-->
 
-  <!--nav bar-->
-  <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
-    <div class="container">
-      <a class="navbar-brand custom-nav__modify-logo" href="index.html">
-        <img src="./assets/Images/onepay-logo.png" alt="">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link nav-item-custom" href="consumer.html"> <img
-                src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
-              Consumer</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg"
-                class="nav-image-align" alt=""> For Business</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
-          <li class="nav-item nav-item-align">
-            <a class="nav-link nav-item-custom" aria-current="page" href="index.html">Home</a>
-          </li>
+    <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
+        <div class="container">
+            <a class="navbar-brand custom-nav__modify-logo" href="index.html">
+                <img src="./assets/Images/onepay-logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-custom" href="consumer.html"> <img
+                                src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
+                            Consumer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg"
+                                class="nav-image-align" alt=""> For Business</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" aria-current="page" href="index.html">Home</a>
+                    </li>
 
-          <li class="nav-item nav-item-align">
-            <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
-          </li>
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
+                      </li>
 
-          <li class="nav-item nav-item-align">
-            <a class="nav-link nav-item-custom" href="aboutus.html">About us</a>
-          </li>
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom" href="aboutus.html">About us</a>
+                    </li>
 
-          <li class="nav-item nav-item-align">
-            <a class="nav-link nav-item-custom active-page" href="contactus.html">Contact us</a>
-          </li>
+                    <li class="nav-item nav-item-align">
+                        <a class="nav-link nav-item-custom active-page" href="contactus.html">Contact us</a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- CONTACT PAGE HEADER SECTION -->
-  <section class="contactus-section">
-    <div class="container">
-      <div class="row contactus-row">
-        <div class="col-md-6 col-sm-12">
-          <div class="contactus-details">
-            <img src="./assets/SVG/beverly.svg" alt="beverly-img">
-            <h1 class="contactus-details__main-title">Reach out to our team anytime, any day of the year!<span><img
-                  src="./assets/SVG/hand.svg" alt="hand-img"></span></h1>
-            <p class="contactus-details__main-para">We are available 24/7 <br> to serve you
-              .</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-sm-12">
-          <img src="./assets/Images/onepay_map.png" alt="world-map" class="img-fluid">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4 contactus-info">
-          <p class="contactus-info__title">Follow us</p>
-          <ul class="footer-socialmedia">
-            <li class="footer-socialmedia__item">
-              <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
-                  src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
-            </li>
-            <li class="footer-socialmedia__item">
-              <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
-                  src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
-            </li>
-            <li class="footer-socialmedia__item">
-              <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img
-                  src="./assets/Images/twitter.png" alt="socialmedia-logo"></a>
-            </li>
-            <li class="footer-socialmedia__item">
-              <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk"
-                class="footer-socialmedia__item-link"><img src="./assets/Images/linkedin.png"
-                  alt="socialmedia-logo"></a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
-          <p class="contactus-info__details">
-            <img src="./assets/SVG/contact-sec-phone.svg" alt="phone-img" class="contactus-info__details-img">
-            <a href="tel:+94 11 7 021 540" class="contactus-info__details-text">+94 11 7 021 540</a>
-          </p>
-        </div>
-        <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
-          <p class="contactus-info__details">
-            <img src="./assets/SVG/gps.svg" alt="gps-img" class="contactus-info__details-img">
-            <span class="contactus-info__details-text"> 410/22, Galle Road, <br> Colombo 03</span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contactus-detail-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 contactus-form__sec">
-          <h2 class="contactus-detail__title">Thank you for your interest <br> in Onepay</h2>
-          <p class="contactus-detail__para">
-            To perceive a smart society by providing high quality customer experience. If
-            your customer wants to pay with a credit/debit card, transfer money online
-            or even use an E-wallet, your company will be able to facilitate it with the
-            help of Onepay</p>
-          <div class="contactus-detail__logo">
-            <img src="./assets/SVG/iso.svg" alt="iso-logo">
-            <img src="./assets/SVG/national-logo.svg" alt="national-logo">
-          </div>
-        </div>
-
-        <div class="col-md-7">
-          <h2 class="contactus-detail-form__title">Say hello</h2>
-
-          <form id="contact-form" class="contact-form" onsubmit="onSubmitHandler(event)">
-            <div class="row mb-3">
-              <div class="col-md-12">
-                <div class="d-flex align-items-start justify-content-start">
-                  <label for="name">Full Name</label>
-                  <span class="form-required-sign">*</span>
-                </div>
-                <input type="text" class="form-control" name="name" id="name"
-                  placeholder="Write your Full Name" oninput="onInputHandler(event)">
-                <div id="name-error" class="error-wrapper"></div>
-              </div>
+                    <li class="nav-item">
+                        <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
+                    </li>
+                </ul>
             </div>
+        </div>
+    </nav>
 
-            <div class="row mb-3">
-              <div class="col-md-12">
-                <div class="d-flex align-items-start justify-content-start">
-                  <label for="phone">Phone Number</label>
-                  <span class="form-required-sign">*</span>
+    <!-- CONTACT PAGE HEADER SECTION -->
+    <section class="contactus-section">
+        <div class="container">
+            <div class="row contactus-row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="contactus-details">
+                        <img src="./assets/SVG/beverly.svg" alt="beverly-img">
+                        <h1 class="contactus-details__main-title">Reach out to our team anytime, any day of the year!<span><img
+                                    src="./assets/SVG/hand.svg" alt="hand-img"></span></h1>
+                        <p class="contactus-details__main-para">We are available 24/7 <br> to serve you
+                            .</p>
+                    </div>
                 </div>
-                <input type="text" class="form-control" name="phone" id="phone"
-                  placeholder="Write your Phone Number" oninput="onInputHandler(event)">
-                <div id="phone-error" class="error-wrapper"></div>
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-12">
-                <div class="d-flex align-items-start justify-content-start">
-                  <label for="email">Email Address</label>
-                  <span class="form-required-sign">*</span>
+                <div class="col-md-6 col-sm-12">
+                    <img src="./assets/Images/onepay_map.png" alt="world-map" class="img-fluid">
                 </div>
-                <input type="email" class="form-control" name="email" id="email"
-                  placeholder="Write your Email address" oninput="onInputHandler(event)">
-                <div id="email-error" class="error-wrapper"></div>
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-12">
-                <div class="d-flex align-items-start justify-content-start">
-                  <label for="message">Message</label>
-                  <span class="form-required-sign">*</span>
-                </div>
-                <textarea id="message" name="message" cols="30" rows="10" class="form-control"
-                  placeholder="Write your message" oninput="onInputHandler(event)"></textarea>
-                <div id="message-error" class="error-wrapper"></div>
-              </div>
             </div>
 
             <div class="row">
-              <div class="col-md-12 d-flex justify-content-end">
-                <button class="btn contact-form-submit-btn" type="submit">Submit</button>
-              </div>
+                <div class="col-md-4 contactus-info">
+                    <p class="contactus-info__title">Follow us</p>
+                    <ul class="footer-socialmedia">
+                        <li class="footer-socialmedia__item">
+                            <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+                        </li>
+                        <li class="footer-socialmedia__item">
+                            <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+                        </li>
+                        <li class="footer-socialmedia__item">
+                            <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
+                                                                                                              alt="socialmedia-logo"></a>
+                        </li>
+                        <li class="footer-socialmedia__item">
+                            <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
+                                    src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
+                    <p class="contactus-info__details">
+                        <img src="./assets/SVG/contact-sec-phone.svg" alt="phone-img" class="contactus-info__details-img">
+                        <a href="tel:+94 11 7 021 540" class="contactus-info__details-text">+94 11 7 021 540</a>
+                    </p>
+                </div>
+                <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
+                    <p class="contactus-info__details">
+                        <img src="./assets/SVG/gps.svg" alt="gps-img" class="contactus-info__details-img">
+                        <span class="contactus-info__details-text"> 410/22, Galle Road, <br> Colombo 03</span>
+                    </p>
+                </div>
             </div>
-          </form>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- form submit success modal  -->
-  <div class="modal fade" id="success-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Success</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img class="img-fluid" src="./assets/Images/congrats.png" />
+    <section class="contactus-detail-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 contactus-form__sec">
+                    <h2 class="contactus-detail__title">Thank you for your interest <br> in Onepay</h2>
+                    <p class="contactus-detail__para">To perceive a smart society by providing high quality customer experience. If
+                        your customer wants to pay with a credit/debit card, transfer money online
+                        or even use an E-wallet, your company will be able to facilitate it with the
+                        help of Onepay</p>
+                    <div class="contactus-detail__logo">
+                        <img src="./assets/SVG/iso.svg" alt="iso-logo">
+                        <!-- <img src="./assets/SVG/national-logo.svg" alt="national-logo"> -->
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h2 class="contactus-detail-form__title">Say hello</h2>
 
-          <p class="pt-2">We will get back to you soon</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                    <form id="contactus-form" class="contactus-form">
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="name" class="contactus-form-label">Full Name</label>
+                                <input type="text" class="form-control contactus-form-input" name="name" id="name" placeholder="Write your Full Name">
+                            </div>
+                        </div>
 
 
-  <!-- form submit failed modal  -->
-  <div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Error</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-center">
-          <img class="img-fluid" src="./assets/Images/failed.png" />
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="phone" class="contactus-form-label">Phone Number</label>
+                                <input type="text" class="form-control contactus-form-input" name="phone" id="phone" placeholder="Write your Phone Number">
+                            </div>
+                        </div>
 
-          <p class="pt-2">Error occured while saving details!!!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="email_address" class="contactus-form-label">Email Address</label>
+                                <input type="email" class="form-control contactus-form-input"  name="email_address" id="email_address" placeholder="Write your Email address">
+                            </div>
+                        </div>
 
-  
-  <!-- FOOTER SECTION -->
-  <footer class="footer">
-    <div class="container footer__top">
-      <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
-          <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
-          <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated
-            and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri
-            Lanka.</p>
+                        <div class="row mb-3">
+                            <div class="col-md-12">
+                                <label for="message" class="contactus-form-label">Message</label>
+                                <textarea id="message" name="message" cols="30" rows="10" class="form-control contactus-form-textarea"
+                                placeholder="Write your message"></textarea>
+                            </div>
+                        </div>
 
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
-          <h3 class="footer__links_heading">Links</h3>
-          <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
-          <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
-          <div><a href="/merchant_terms.pdf" download class="footer_a_tag">Merchant Terms & Conditions</a></div>
-          <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
-          <h3 class="footer__links_heading">Contact us</h3>
-          <p class="footer__paragraph">410/22, <br> Galle Road,
-            <br>
-            Colombo 03.
-          </p>
-          <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 11 7 021 540</a>
-        </div>
-        <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
-          <h3 class="footer__links_heading">Download</h3>
-          <div class="footer-logo-section">
-            <div>
-              <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`"
-                src="./assets/SVG/download-apple.svg" alt="appstore-download">
-              <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`"
-                src="./assets/SVG/download-google.svg" alt="playstore-download">
-              <img style="width: 119px; height: auto; margin: 7px 0;"
-                onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`"
-                src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
+                        <div class="row">
+                            <div class="col-md-12 d-flex justify-content-end">
+                                <button id="submit" class="btn contact-btn">Submit</button>
+                            </div>
+                        </div> 
+                    </form>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <ul class="footer-socialmedia">
-              <li class="footer-socialmedia__item">
-                <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
-                    src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
-              </li>
-              <li class="footer-socialmedia__item">
-                <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
-                    src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
-              </li>
-              <li class="footer-socialmedia__item">
-                <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img
-                    src="./assets/Images/twitter.png" alt="socialmedia-logo"></a>
-              </li>
-              <li class="footer-socialmedia__item">
-                <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk"
-                  class="footer-socialmedia__item-link"><img src="./assets/Images/linkedin.png"
-                    alt="socialmedia-logo"></a>
-              </li>
-            </ul>
+
+
+
+
+
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Success</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+             <img  class="img-fluid" src="./assets/Images/congrats.png"/>
+      
+             <p class="pt-2">We will get back to you soon</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
 
-    <div class="footer__copyright_text">
-      <div class="footer__horizontal_line"></div>
-      <p class="footer__copyrigh_paragraph">© 2022 Copyright by Onepay. All rights reserved.</p>
-    </div>
-  </footer>
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Error</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            
+             
+            </div>
+            <div class="modal-body text-center">
+             <img  class="img-fluid" src="./assets/Images/failed.png"/>
+      
+             <p class="pt-2" id="contactus-form-field-error">Please fill all required details!!!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      <div class="modal fade" id="error2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Error</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+             <img  class="img-fluid" src="./assets/Images/failed.png"/>
+      
+             <p class="pt-2">Error occured while saving details!!!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
 
 
-  <!-- Optional JavaScript; choose one of the two! -->
 
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <!-- JavaScript functions for contact form -->
-  <script src="./js/contact_form.js"></script>
+ <!--For contact us form -->
+ <script>
+    //e.preventDefault();
+    // document.getElementById("id01").style.display = "none";
+    $(document).on("click", "#submit", function (event) {
+      event.preventDefault();
+      var Name1 = document.getElementById("name").value;
+      var email1 = document.getElementById("email_address").value;
+      var phone1 = document.getElementById("phone").value;
+      var message1 = document.getElementById("message").value;
 
-  <script>
-    $(window).scroll(function () {
-      if ($(window).scrollTop() > 10) {
-        $('.custom-nav__modify').addClass('floatingNav');
+      var formData = {
+        name: $("#name").val(),
+        email: $("#email_address").val(),
+        phone: $("#phone").val(),
+        message: $("#message").val(),
+      };
+      
+      if (!checkValidation()) {
+        $('#error').modal('show'); 
       } else {
-        $('.custom-nav__modify').removeClass('floatingNav');
+        $.ajax({
+          url: "https://merchant-api-live-v2.onepay.lk/api/merchant/contact_form/",
+          contentType: "application/json",
+          type: "POST",
+          data: JSON.stringify(formData),
+          dataType: "json",
+          complete: function (response, status) {
+            onItemSaveComplete(JSON.parse(response.responseText), status);
+          },
+          error: function(xhr, textStatus, errorThrown) {
+            $('#error2').modal('show'); 
+          },
+        });
       }
+
+      function checkValidation() {
+        // empty fields
+        if(!Name1 || !email1 || !phone1 || !message1) {
+          $('#contactus-form-field-error').text('Please fill all required details!!!');
+          return false;
+        } 
+        // name
+        if(!/^[^0-9]+$/.test(Name1)) {
+          $('#contactus-form-field-error').text('Invalid name. Name should not contain numbers!!!');
+          return false;
+        }
+        // phone
+        if(!/^[\\+]?[0-9]{9}[0-9]*$/.test(phone1)) {
+          $('#contactus-form-field-error').text('Invalid phone number!!!');
+          return false;
+        }
+        // email
+        if(!/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email1)) {
+          $('#contactus-form-field-error').text('Invalid email!!!');
+          return false;
+        }
+
+        return true;
+
+      }
+
+      function onItemSaveComplete(response, status) {
+        if (status == "success") {
+          if(response.status==100)
+        {
+          $('#success').modal('show');
+          $('#contactus-form').trigger('reset');
+        }else if(response.status==103){
+          $('#error').modal('show'); 
+        }else{
+          $('#error2').modal('show'); 
+        }
+        } else if (status == "error") {
+          $('#error2').modal('show'); 
+        } else {
+          alert("Error occured");
+        }
+      }
+
+      
     });
+
   </script>
 
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container footer__top">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                    <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
+                    <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri Lanka.</p>
+
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Links</h3>
+                    <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
+                    <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
+                    <div><a href="/merchant_terms.pdf" download class="footer_a_tag">Merchant Terms & Conditions</a></div>
+                    <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Contact us</h3>
+                    <p class="footer__paragraph">410/22, <br> Galle Road,
+                        <br>
+                        Colombo 03. </p>
+                    <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 11 7 021 540</a>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
+                    <h3 class="footer__links_heading">Download</h3>
+                    <div class="footer-logo-section">
+                        <div>
+                          <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`" src="./assets/SVG/download-apple.svg" alt="appstore-download">
+                          <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`" src="./assets/SVG/download-google.svg" alt="playstore-download">
+                          <img
+                            style="width: 119px; height: auto; margin: 7px 0;"
+                            onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`" 
+                            src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
+                        </div>
+
+                        <ul class="footer-socialmedia">
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
+                                        alt="socialmedia-logo"></a>
+                            </li>
+                            <li class="footer-socialmedia__item">
+                                <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
+                                        src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer__copyright_text">
+            <div class="footer__horizontal_line"></div>
+            <p class="footer__copyrigh_paragraph">© 2022 Copyright by Onepay. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).scroll(function() {
+            if ($(window).scrollTop() > 10) {
+                $('.custom-nav__modify').addClass('floatingNav');
+            } else {
+                $('.custom-nav__modify').removeClass('floatingNav');
+            }
+        });
+    </script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
