@@ -1180,8 +1180,8 @@ body {
    }
 
    .contactus-detail__logo img {
-     width: 74px;
-     height: 74px;
+     width: 75%;
+     height: 75%;
      object-fit: cover;
    }
 
