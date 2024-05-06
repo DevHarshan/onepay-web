@@ -8,13 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
   <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-  <title>Onepay</title>
+ 
 
-  <!-- slider -->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+
+  <title>Sri Lanka's trusted Online Payment Gateway Service</title>
+  <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta property="og:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="twitter:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="description"
+    content="Get paid online quickly, securely & globally with Sri Lanka's secured payment gateway with ISO 27001. OnePay helps over 3000 businesses in Sri Lanka.">
+  <meta name="keywords"
+    content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
+
+  <meta name="author" content="Onepay Sri Lanka">
+
+
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -276,13 +284,17 @@
             <div class="col-6">
               <div class="d-flex flex-column h-100 justify-content-center">
                 <p class="regis_name mb-0">Subscribe for newsletter</p>
-                <input class="regi_email" type="text" id="fname" name="fname" placeholder="Write your email address">
+                <input class="regi_email" type="text" id="newsletter_field" name="fname" placeholder="Write your email address">
             </div>
+
+             <!-- Error and warning messages -->
+          <span id="emailError_01" style="color: red;"></span>
+          <span id="emailWarning_01" style="color: rgb(17, 141, 38);"></span>
               
           </div>
           <div class="col-6">
               <div class="d-flex h-100 justify-content-center align-items-center" style="float: right;">
-                  <button class="more_about_btn2">Submit</button>
+                  <button class="more_about_btn2" id="subscribeBtn_01">Submit</button>
               </div>
           </div>
           
@@ -1296,7 +1308,68 @@
         }
       });
     });
+  
+
+
+  ///  subscribe news letter 001 
+
+  $("#subscribeBtn_01").click(function() {
+      // Reset error and warning messages
+      $("#emailError_01").text("");
+      $("#emailWarning_01").text("");
+      
+      // Get the email address from the input field
+      var email = $("#newsletter_field").val();
+      
+      // Check if the email address is not empty
+      if ($.trim(email) === "") {
+        $("#emailError_01").text("Please enter your email address.");
+        return;
+      }
+      
+      // Validate the email address format
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        $("#emailError_01").text("Please enter a valid email address.");
+        return;
+      }
+      
+      // Create the data object
+      var data = JSON.stringify({
+        "customer_email": email
+      });
+  
+      // Send the data to the backend service
+      $.ajax({
+        type: "POST",
+        url: "https://merchant-api-live-v2.onepay.lk/api/events/event-subscribe/",
+        data: data,
+        contentType: "application/json",
+        success: function(response) {
+          console.log(response); // Log the response from the server
+         // alert("Subscription successful!"); // You can show a success message here
+          $("#emailWarning_01").text("Subscription successful!");
+          hidePopup();
+        },
+        error: function(xhr, status, error) {
+          console.error(xhr.responseText); // Log the error response from the server
+          alert("An error occurred. Please try again later."); // You can show an error message here
+        }
+      });
+    });
+  
+
+
   });
+
+
+
+
+
+
+
+
+
   </script>
 
 
@@ -1479,6 +1552,18 @@
         });
     });
 </script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VM51P5MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q5VM51P5MX');
+</script>
+
 
 
   <!-- Option 2: Separate Popper and Bootstrap JS -->
