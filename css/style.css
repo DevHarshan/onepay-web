@@ -10,6 +10,8 @@
 
 .whatsapp_text {
   cursor: pointer;
+  margin-left: 9px;
+    margin-top: 2px;
 }
 
 body {
@@ -2560,7 +2562,7 @@ p.subscriptionDetails {
 
 .brand_image {
   width: auto;
-  height: 45px;
+  height: 90px;
 }
 
 .feature-list--section {
@@ -2698,10 +2700,17 @@ p.subscriptionDetails {
   display: none;
   width: 80vw;
   height: 70vh;
+  /* background-image: url("../assets/ImagesNew/pop_bac.png");
+  background-size: cover;
+  background-repeat: no-repeat; */
+  z-index: 99;
+}
+.pop_bac{
   background-image: url("../assets/ImagesNew/pop_bac.png");
-  /* background-size: cover; */
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 99;
+
 }
 
 .popup-close {
@@ -2893,7 +2902,7 @@ p.subscriptionDetails {
 .img-fluid2 {
   /* width: 109%;
   margin-left: -42px; */
-  width: 100%;
+  width: 150%;
   float: right;
 }
 .what_say{
