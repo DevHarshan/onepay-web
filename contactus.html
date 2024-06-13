@@ -2,276 +2,217 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
-    <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-    <title>Onepay - Contact Us</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+  <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+  <title>Onepay - Contact Us</title>
 
 
-    <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
-    <meta property="og:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
-    <meta name="twitter:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
-    <meta name="description"
-      content="Get paid online quickly, securely & globally with Sri Lanka's secured payment gateway with ISO 27001. OnePay helps over 3000 businesses in Sri Lanka.">
-    <meta name="keywords"
-      content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
-  
-    <meta name="author" content="Onepay Sri Lanka">
+  <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta property="og:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="twitter:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="description"
+    content="Get paid online quickly, securely & globally with Sri Lanka's secured payment gateway with ISO 27001. OnePay helps over 3000 businesses in Sri Lanka.">
+  <meta name="keywords"
+    content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
 
+  <meta name="author" content="Onepay Sri Lanka">
+  <!-- Local CSS and JS files -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/slick-theme.min.css">
+  <link rel="stylesheet" href="./css/slick.min.css">
+  <link rel="stylesheet" href="./css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/slick.min.js"></script>
+  <script src="./script.js"></script>
+ <link rel="stylesheet" href="./css/style.css">
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome Icon Library -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
 
-        <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
-        <script>
-          window.fbAsyncInit = function () {
-            FB.init({
-              xfbml: true,
-              version: "v8.0",
-            });
-          };
-    
-          (function (d, s, id) {
-            var js,
-              fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-            fjs.parentNode.insertBefore(js, fjs);
-          })(document, "script", "facebook-jssdk");
-        </script>
-    
-        <!-- Your Chat Plugin code -->
-        <div
-          class="fb-customerchat"
-          attribution="setup_tool"
-          page_id="695949390851250"
-          theme_color="#67b868"
-        ></div>
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script src="./js/sdk_form.js"></script>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v8.0",
+      });
+    };
 
-    <!--nav bar-->
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
 
-    <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
-        <div class="container">
-            <a class="navbar-brand custom-nav__modify-logo" href="index.html">
-                <img src="./assets/Images/onepay-logo.png" alt="">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link nav-item-custom" href="consumer.html"> <img
-                                src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
-                            Consumer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg"
-                                class="nav-image-align" alt=""> For Business</a>
-                    </li>
-                </ul>
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat" attribution="setup_tool" page_id="695949390851250" theme_color="#67b868"></div>
+  <!--nav bar-->
+
+  <span id="header"></span>
 
 
-                 <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
-              <li class="nav-item nav-item-align">
-                <a class="nav-link nav-item-custom " href="aboutus.html">About us</a>
-            </li>
-
-            <li class="nav-item nav-item-align">
-              <a class="nav-link nav-item-custom" href="https://developer.onepay.lk/#introduction" target="_blank">Developer Doc</a>
-          </li>
-
-
-
-           <li class="nav-item nav-item-align">
-                    <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
-          </li>
-
-                
-          <li class="nav-item nav-item-align">
-                    <a class="nav-link nav-item-custom active-page" href="contactus.html">Contact us</a>
-          </li>
-
-          <li class="nav-item">
-                    <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
-          </li>
-
-            </ul>
-
-
-
-            </div>
-        </div>
-    </nav>
-
-   
-   <!-- CONTACT PAGE HEADER SECTION -->
-   <section class="contactus-section">
+  <!-- CONTACT PAGE HEADER SECTION -->
+  <section class="contactus-section">
     <div class="container">
-        <div class="row contactus-row">
-            <div class="col-md-6 col-sm-12">
-                <div class="contactus-details">
-                    <img src="./assets/SVG/beverly.svg" alt="beverly-img">
-                    <h1 class="contactus-details__main-title">Reach out to our team anytime, any day of the year!<span><img
-                                src="./assets/SVG/hand.svg" alt="hand-img"></span></h1>
-                    <p class="contactus-details__main-para">We are available 24/7 <br> to serve you
-                        .</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12">
-                <img src="./assets/Images/onepay_map.png" alt="world-map" class="img-fluid">
-            </div>
+      <div class="row contactus-row">
+        <div class="col-md-6 col-sm-12">
+          <div class="contactus-details">
+            <img src="./assets/SVG/beverly.svg" alt="beverly-img">
+            <h1 class="contactus-details__main-title">Reach out to our team anytime, any day of the year!<span><img
+                  src="./assets/SVG/hand.svg" alt="hand-img"></span></h1>
+            <p class="contactus-details__main-para">We are available 24/7 <br> to serve you
+              .</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <img src="./assets/Images/onepay_map.png" alt="world-map" class="img-fluid">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4 contactus-info">
+          <p class="contactus-info__title">Follow us</p>
+          <ul class="footer-socialmedia">
+            <li class="footer-socialmedia__item">
+              <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
+                  src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
+            </li>
+            <li class="footer-socialmedia__item">
+              <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
+                  src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
+            </li>
+            <li class="footer-socialmedia__item">
+              <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img
+                  src="./assets/Images/twitter.png" alt="socialmedia-logo"></a>
+            </li>
+            <li class="footer-socialmedia__item">
+              <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk"
+                class="footer-socialmedia__item-link"><img src="./assets/Images/linkedin.png"
+                  alt="socialmedia-logo"></a>
+            </li>
+          </ul>
         </div>
 
-        <div class="row">
-            <div class="col-md-4 contactus-info">
-                <p class="contactus-info__title">Follow us</p>
-                <ul class="footer-socialmedia">
-                    <li class="footer-socialmedia__item">
-                        <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
-                                src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
-                    </li>
-                    <li class="footer-socialmedia__item">
-                        <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
-                                src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
-                    </li>
-                    <li class="footer-socialmedia__item">
-                        <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
-                                                                                                          alt="socialmedia-logo"></a>
-                    </li>
-                    <li class="footer-socialmedia__item">
-                        <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
-                                src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
-                    </li>
-                </ul>
-            </div>
-           
-            <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
-                <p class="contactus-info__details">
-                    <img src="./assets/SVG/whatsapp.svg" alt="phone-img" class="contactus-info__details-img">
+        <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
+          <p class="contactus-info__details">
+            <img src="./assets/SVG/whatsapp.svg" alt="phone-img" class="contactus-info__details-img">
 
-                    <span href="tel:+94760523025" class="contactus-info__details-text ">
-                      <i class="fas fa-edit"></i> +94 76 052 3025<br>
-                      <i class="fas fa-phone-square-alt"></i> +94 11 702 1540
-                  </span>
-                  
-                  
-
-                </p> 
-
-            </div>
+            <span href="tel:+94760523025" class="contactus-info__details-text ">
+              <i class="fas fa-edit"></i> +94 76 052 3025<br>
+              <i class="fas fa-phone-square-alt"></i> +94 11 702 1540
+            </span>
 
 
-            <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
-                <p class="contactus-info__details">
-                    <img src="./assets/SVG/gps.svg" alt="gps-img" class="contactus-info__details-img">
-                    <span class="contactus-info__details-text"> 3rd Floor, 292,Richmond House,<br> Gamsabha Junction,High Level Road, Nugegoda Sri Lanka</span>
-                </p>
-            </div>
+
+          </p>
+
         </div>
+
+
+        <div class="col-md-4 contactus-info d-flex align-items-center justify-content-center">
+          <p class="contactus-info__details">
+            <img src="./assets/SVG/gps.svg" alt="gps-img" class="contactus-info__details-img">
+            <span class="contactus-info__details-text"> 3rd Floor, 292,Richmond House,<br> Gamsabha Junction,High Level
+              Road, Nugegoda Sri Lanka</span>
+          </p>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-    <section class="contactus-detail-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-5 contactus-form__sec">
-                    <h2 class="contactus-detail__title">Thank you for your interest <br> in Onepay</h2>
-                    <p class="contactus-detail__para">To perceive a smart society by providing high quality customer experience. If
-                        your customer wants to pay with a credit/debit card, transfer money online
-                        or even use an E-wallet, your company will be able to facilitate it with the
-                        help of Onepay</p>
-                    <div class="contactus-detail__logo">
-                        <img src="./assets/Images/iso.jpeg" alt="iso-logo">
-                        <!-- <img src="./assets/SVG/national-logo.svg" alt="national-logo"> -->
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <h2 class="contactus-detail-form__title">Say hello</h2>
-
-                    <form id="contactus-form" class="contactus-form" onsubmit="onSubmitHandler(event)">
-                        <div class="row mb-3">
-                          <div class="col-md-12">
-                            <div class="d-flex align-items-start justify-content-start">
-                              <label for="name" class="contactus-form-label">Full Name</label>
-                              <span class="form-required-sign">*</span>
-                            </div>
-                            <input type="text" class="form-control contactus-form-input" name="name" id="name"
-                              placeholder="Write your Full Name" oninput="onInputHandler(event)">
-                            <div id="name-error" class="error-wrapper"></div>
-                          </div>
-                        </div>
-
-                        <div class="row mb-3">
-                          <div class="col-md-12">
-                            <div class="d-flex align-items-start justify-content-start">
-                              <label for="phone" class="contactus-form-label">Phone Number</label>
-                              <span class="form-required-sign">*</span>
-                            </div>
-                            <input type="text" class="form-control contactus-form-input" name="phone" id="phone"
-                              placeholder="Write your Phone Number" oninput="onInputHandler(event)">
-                            <div id="phone-error" class="error-wrapper"></div>
-                          </div>
-                        </div>
-
-                        <div class="row mb-3">
-                          <div class="col-md-12">
-                            <div class="d-flex align-items-start justify-content-start">
-                              <label for="email" class="contactus-form-label">Email Address</label>
-                              <span class="form-required-sign">*</span>
-                            </div>
-                            <input type="email" class="form-control contactus-form-input" name="email" id="email"
-                              placeholder="Write your Email address" oninput="onInputHandler(event)">
-                            <div id="email-error" class="error-wrapper"></div>
-                          </div>
-                        </div>
-
-                        <div class="row mb-3">
-                          <div class="col-md-12">
-                            <div class="d-flex align-items-start justify-content-start">
-                              <label for="message" class="contactus-form-label">Message</label>
-                              <span class="form-required-sign">*</span>
-                            </div>
-                            <textarea id="message" name="message" cols="30" rows="10" class="form-control contactus-form-textarea"
-                              placeholder="Write your message" oninput="onInputHandler(event)"></textarea>
-                            <div id="message-error" class="error-wrapper"></div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 d-flex justify-content-end">
-                                <button class="btn contact-btn" type="submit">Submit</button>
-                            </div>
-                        </div> 
-                    </form>
-                </div>
-            </div>
+  <section class="contactus-detail-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 contactus-form__sec">
+          <h2 class="contactus-detail__title">Thank you for your interest <br> in Onepay</h2>
+          <p class="contactus-detail__para">To perceive a smart society by providing high quality customer experience.
+            If
+            your customer wants to pay with a credit/debit card, transfer money online
+            or even use an E-wallet, your company will be able to facilitate it with the
+            help of Onepay</p>
+          <div class="contactus-detail__logo">
+            <img src="./assets/Images/iso.jpeg" alt="iso-logo">
+            <!-- <img src="./assets/SVG/national-logo.svg" alt="national-logo"> -->
+          </div>
         </div>
-    </section>
+        <div class="col-md-7">
+          <h2 class="contactus-detail-form__title">Say hello</h2>
+
+          <form id="contactus-form" class="contactus-form" onsubmit="onSubmitHandler(event)">
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="d-flex align-items-start justify-content-start">
+                  <label for="name" class="contactus-form-label">Full Name</label>
+                  <span class="form-required-sign">*</span>
+                </div>
+                <input type="text" class="form-control contactus-form-input" name="name" id="name"
+                  placeholder="Write your Full Name" oninput="onInputHandler(event)">
+                <div id="name-error" class="error-wrapper"></div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="d-flex align-items-start justify-content-start">
+                  <label for="phone" class="contactus-form-label">Phone Number</label>
+                  <span class="form-required-sign">*</span>
+                </div>
+                <input type="text" class="form-control contactus-form-input" name="phone" id="phone"
+                  placeholder="Write your Phone Number" oninput="onInputHandler(event)">
+                <div id="phone-error" class="error-wrapper"></div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="d-flex align-items-start justify-content-start">
+                  <label for="email" class="contactus-form-label">Email Address</label>
+                  <span class="form-required-sign">*</span>
+                </div>
+                <input type="email" class="form-control contactus-form-input" name="email" id="email"
+                  placeholder="Write your Email address" oninput="onInputHandler(event)">
+                <div id="email-error" class="error-wrapper"></div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-12">
+                <div class="d-flex align-items-start justify-content-start">
+                  <label for="message" class="contactus-form-label">Message</label>
+                  <span class="form-required-sign">*</span>
+                </div>
+                <textarea id="message" name="message" cols="30" rows="10" class="form-control contactus-form-textarea"
+                  placeholder="Write your message" oninput="onInputHandler(event)"></textarea>
+                <div id="message-error" class="error-wrapper"></div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 d-flex justify-content-end">
+                <button class="btn contact-btn" type="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <!-- form submit success modal  -->
@@ -320,114 +261,30 @@
 
 
   <!-- FOOTER SECTION -->
-  <footer class="footer">
-    <div class="container footer__top">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
-                <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
-                <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri Lanka. <br> PV Number PV00206829</p>
+  <div id="footer"></div>
+  <!-- JavaScript functions for contactus form -->
+  <script src="./js/contact_form.js"></script>
 
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
-                <h3 class="footer__links_heading">Links</h3>
-                <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
-                <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
-                <div><a href="./agreement.html"  class="footer_a_tag" target="_blank">Merchant Terms & Conditions</a></div>
-                <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
-                <h3 class="footer__links_heading">Contact us</h3>
-                <p class="footer__paragraph">3rd Floor, 292,Richmond House, <br> Gamsabha Junction,High Level Road,
-                    <br>
-                    Nugegoda, Sri Lanka. </p>
-                <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 76 052 3025</a> <br>
-                <a href="tel:+94 11 702 1540" class="footer__paragraph">+94 11 702 1540</a>
-
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
-                <h3 class="footer__links_heading">Download</h3>
-                <div class="footer-logo-section">
-                    <div>
-                      <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`" src="./assets/SVG/download-apple.svg" alt="appstore-download">
-                      <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`" src="./assets/SVG/download-google.svg" alt="playstore-download">
-                      <img
-                        style="width: 119px; height: auto; margin: 7px 0;"
-                        onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`" 
-                        src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
-                    </div>
-
-                    <ul class="footer-socialmedia">
-                        <li class="footer-socialmedia__item">
-                            <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
-                                    src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
-                        </li>
-                        <li class="footer-socialmedia__item">
-                            <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
-                                    src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
-                        </li>
-                        <li class="footer-socialmedia__item">
-                            <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
-                                    alt="socialmedia-logo"></a>
-                        </li>
-                        <li class="footer-socialmedia__item">
-                            <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
-                                    src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+  <script>
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 10) {
+        $('.custom-nav__modify').addClass('floatingNav');
+      } else {
+        $('.custom-nav__modify').removeClass('floatingNav');
+      }
+    });
+  </script>
 
 
-    <div class="footer__copyright_text">
-        <div class="footer__horizontal_line"></div>
-        <p class="footer__copyrigh_paragraph">© 2024 Copyright by Onepay. All rights reserved.</p>
-    </div>
-</footer>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VM51P5MX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- JavaScript functions for contactus form -->
-    <script src="./js/contact_form.js"></script>
-
-    <script>
-        $(window).scroll(function() {
-            if ($(window).scrollTop() > 10) {
-                $('.custom-nav__modify').addClass('floatingNav');
-            } else {
-                $('.custom-nav__modify').removeClass('floatingNav');
-            }
-        });
-    </script>
-    
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VM51P5MX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Q5VM51P5MX');
-</script>
-
-
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    gtag('config', 'G-Q5VM51P5MX');
+  </script>
 </body>
 
 </html>

@@ -2,14 +2,11 @@
 <html lang="en" style="overflow-x: hidden;">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
   <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
- 
-
   <title>Sri Lanka's trusted Online Payment Gateway Service</title>
   <meta property="og:image" content="./assets/ImagesNew/512.jpg">
   <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
@@ -21,30 +18,21 @@
     content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
 
   <meta name="author" content="Onepay Sri Lanka">
-
-
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
-    integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
-    integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+   <!-- Local CSS and JS files -->
+   <link href="./css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="./css/slick-theme.min.css">
+   <link rel="stylesheet" href="./css/slick.min.css">
+   <link rel="stylesheet" href="./css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <script src="./js/jquery-3.7.1.min.js"></script>
+   <script src="./js/bootstrap.bundle.min.js"></script>
+   <script src="./js/slick.min.js"></script>
+   <script src="./script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
-
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
+
 <style>
   @media (max-width: 768px) {
     .navbar>.container{
@@ -68,8 +56,6 @@
 <script>
   function getMobileOperatingSystem() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-    // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
       var a = document.getElementById('myElementID');
       a.href = "http://www.mywebsite.com";
@@ -79,8 +65,6 @@
     if (/android/i.test(userAgent)) {
       return "Android";
     }
-
-    // iOS detection from: http://stackoverflow.com/a/9039885/177710
     if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
       return "iOS";
     }
@@ -94,43 +78,29 @@
   // subscribe funcion 
 
   function subscribe2() {
-  // Get the email address from the input field
   var email = document.getElementById("emailInput").value;
   console.log(email)
-  
-  // Check if the email address is not empty
   if (email.trim() === "") {
     alert("Please enter your email address.");
     return;
   }
-
-   // Validate the email address format
    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       alert("Please enter a valid email address.");
       return;
     }
-    
-  
-  // Create the data object
   var data = JSON.stringify({
     "customer_email": email
   });
-
-  // Create a new XMLHttpRequest object
   var xhr = new XMLHttpRequest();
   xhr.withCredentials = true;
-
-  // Define what happens on successful data submission
   xhr.addEventListener("readystatechange", function() {
     if(this.readyState === 4) {
-      console.log(this.responseText); // Log the response from the server
+      console.log(this.responseText); 
       hidePopup();
-      alert("Subscription successful!"); // You can show a success message here
+      alert("Subscription successful!");
     }
   });
-
-  // Open a new POST request to the backend service
   xhr.open("POST", "https://merchant-api-live-v2.onepay.lk/api/events/event-subscribe/");
   
   // Set the Content-Type header
@@ -139,13 +109,15 @@
   // Send the data to the backend service
   xhr.send(data);
 }
-
-
 </script>
+
 
 <body>
   <!-- Load Facebook SDK for JavaScript -->
   <div id="fb-root"></div>
+  
+
+  <script src="./js/sdk_form.js"></script>
   <script>
     window.fbAsyncInit = function () {
       FB.init({
@@ -199,137 +171,15 @@
 })();
 
   </script>
-
-  
-
-
   <!-- Your Chat Plugin code -->
+  
   <div class="fb-customerchat" attribution="setup_tool" page_id="695949390851250" theme_color="#67b868"></div>
-  <nav class="navbar navbar-expand-lg navbar-light custom-nav__modify sticky-top">
-    <div class="container">
-        <a class="navbar-brand custom-nav__modify-logo" href="index.html">
-            <img src="./assets/Images/onepay-logo.png" alt="">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse custom-nav__modify-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom" href="consumer.html"> <img
-                            src="./assets/SVG/Add_apps_perspective_matte 1.svg" class="nav-image-align" alt=""> For
-                        Consumer</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link nav-item-custom" href="business.html"><img src="./assets/SVG/consumer.svg"
-                            class="nav-image-align" alt=""> For Business</a>
-                </li>
-            </ul>
-
-            <ul class="navbar-nav  mb-2 mb-lg-0 d-flex">
-              <li class="nav-item nav-item-align">
-                <a class="nav-link nav-item-custom" href="aboutus.html">About us</a>
-            </li>
-
-            <li class="nav-item nav-item-align">
-              <a class="nav-link nav-item-custom" href="https://developer.onepay.lk/#introduction" target="_blank">Developer Doc</a>
-          </li>
-
-
-
-           <li class="nav-item nav-item-align">
-                    <a class="nav-link nav-item-custom" href="pricing.html">Pricing</a>
-          </li>
-
-                
-          <li class="nav-item nav-item-align">
-                    <a class="nav-link nav-item-custom" href="contactus.html">Contact us</a>
-          </li>
-
-          <li class="nav-item">
-                    <a class="nav-link login-merchnat__btn" href="https://merchant-v2.onepay.lk/">Login as Merchant</a>
-          </li>
-
-            </ul>
-
-        </div>
-    </div>
-</nav>
-
+  <!-- <iframe class="nav_iframe" style="border: none;width: 100%;" id="navebar-iframe" src="navbar.html">
+  </iframe>  -->
+  
   <!-- hero section -->
-  <header>
+  <span id="header"></span>
 
-    <section class="home-section">
-      <div class="container_home">
-        <div class="row">
-          <div class="col-md-6 d-flex flex-column justify-content-center">
-           
-            <h2 class="home_subhead_text">Online Payment solutions for SMEs</h2>
-            <h2 class="home_subhead2_text">Managing business payments has never been easier</h2>
-            <h2 class="home_subhead3_text">Onepay helps over 3000 businesses in Sri Lanka process payments efficiently and securely. With our no-code payment solutions, businesses can start without any technical knowledge. 
-            </h2>
-           
-            <!-- <div class="row align-items-center" style="background-color: #ffff;padding: 12px;">
-                <div class="col-6">
-                  
-                  <div class="d-flex flex-column h-100 justify-content-center">
-                      <p class="regis_name mb-0">Register using email address</p>
-                      <p class="regi_email mb-0">sample@gmail.com</p>
-                  </div>
-              </div>
-              <div class="col-6">
-                  <div class="d-flex h-100 justify-content-center align-items-center">
-                      <button class="more_about_btn2">Submit</button>
-                  </div>
-              </div>
-              
-          </div> -->
-          <div class="row align-items-center" style="background-color: #ffff;padding: 8px;">
-            <div class="col-6">
-              <div class="d-flex flex-column h-100 justify-content-center">
-                <p class="regis_name mb-0">Subscribe for newsletter</p>
-                <input class="regi_email" type="text" id="newsletter_field" name="fname" placeholder="Write your email address">
-            </div>
-
-             <!-- Error and warning messages -->
-          <span id="emailError_01" style="color: red;"></span>
-          <span id="emailWarning_01" style="color: rgb(17, 141, 38);"></span>
-              
-          </div>
-          <div class="col-6">
-              <div class="d-flex h-100 justify-content-center align-items-center" style="float: right;">
-                  <button class="more_about_btn2" id="subscribeBtn_01">Submit</button>
-              </div>
-          </div>
-          
-      </div>
-          
-            <div class="tic_icon_div mt-5">
-              <span>
-                <i class="fa fa-check-circle check_c" aria-hidden="true"></i>
-                <span class="tic_text">Quick Setup</span>
-              </span>
-              <span style="margin-left: 20px;">
-                <i class="fa fa-check-circle check_c" aria-hidden="true"></i>
-                <span class="tic_text">24/7 Service</span>
-              </span>
-              <span style="margin-left: 20px;">
-                <i class="fa fa-check-circle check_c" aria-hidden="true"></i>
-                <span class="tic_text">Dedicated customer service officer</span>
-              </span>
-            </div>
-
-          </div>
-          <div class="col-md-6">
-            <img src="./assets/ImagesNew/home.png" alt="phone-img" class="img-fluid2">
-          </div>
-        </div>
-      </div>
-    </section>
-   
-  </header>
   <!-- SECOND SECTION NEW -->
   <section class="brands-section">
     <div class="container">
@@ -599,8 +449,6 @@
 
     </div>
   </section>
-
-
   <!-- 6TH SECTION -->
   <section class="benefit_section">
     <div class="container">
@@ -694,10 +542,7 @@
   </section>
 
   <!-- 9TH SECTION -->
-
-
-
-  <section class="accept_payment_section" style="background-color: #F0F9F7;margin-bottom: 50px;">
+  <section class="accept_payment_section" style="background-color: #F0F9F7;margin-bottom: 50px;padding-bottom: 50px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -816,7 +661,7 @@
                         </span>
                       </span>
 
-                      <span data-bs-target="#quote-carousel" data-bs-slide-to="2" class="image_mm">
+                      <span data-bs-target="#quote-carousel" data-bs-slide-to="3" class="image_mm">
                         <img class="img-responsive" src="./assets/Images/min/customer.png" alt="">
                         <span>
                           <img class="star_" src="./assets/ImagesNew/star.png" alt="">
@@ -851,116 +696,7 @@
         </div>
     </div>
 </section>
-<!-- 
-   <section class="accept_payment_section" style="background-color: #F0F9F7;padding-bottom: 90px; margin-bottom: 50px;">
-    <div class="container">
-   
-      <div class="row">
-          <div class="col-md-12">
-              <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                 
-                  <div class="carousel-inner text-center">
-                     
-                      <div class="item active">
-                          <blockquote>
-                              <div class="row">
-                                  <div class="col-sm-8 col-sm-offset-2">
-                                      <h4 class="what_say">What Merchnat say </h4>
-                                      <h4 class="what_about">About OnePay</h4>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. !</p>
-                                      <small>Someone famous</small>
-                                  </div>
-                              </div>
-                          </blockquote>
-                      </div>
-                     
-                      <div class="item">
-                          <blockquote>
-                              <div class="row">
-                                  <div class="col-sm-8 col-sm-offset-2">
-                                    <h4 class="what_say">What Merchnat say </h4>
-                                    <h4 class="what_about">About OnePay</h4>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                      <small>Someone famous</small>
-                                  </div>
-                              </div>
-                          </blockquote>
-                      </div>
-                     
-                      <div class="item">
-                          <blockquote>
-                              <div class="row">
-                                  <div class="col-sm-8 col-sm-offset-2">
-                                    <h4 class="what_say">What Merchnat say </h4>
-                                    <h4 class="what_about">About OnePay</h4>
-                                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. .</p>
-                                      <small>Someone famous</small>
-                                  </div>
-                              </div>
-                          </blockquote>
-                      </div>
-                  </div>
-                 
-                  <ol class="carousel-indicators">
-                    <span data-target="#quote-carousel" data-slide-to="0" class="active">
-                       
-                        <img class="img-responsive" src="./assets/ImagesNew/download.jpg" alt="">
-                        <div class="name_">
-                          <div class="img_con">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                          </div>
-                          <p class="slide_name1">Michael Johnson1</p>
-                          <p style="font-size: 14px;" class="slide_name2">Janet Cosmetics</p>
-                        </div>
-                       
-                    </span>
-                    <span data-target="#quote-carousel" data-slide-to="1">
-                       
-                        <img class="img-responsive" src="./assets/ImagesNew/dd2.jpg" alt="">
-                        <div class="name_">
-                          <div class="img_con">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                          </div>
-                          <p class="slide_name1">Michael Johnson2</p>
-                          <p style="font-size: 14px;" class="slide_name2">Janet Cosmetics</p>
-                        </div>
-                    </span>
-                    <span data-target="#quote-carousel" data-slide-to="2">
-                       
-                      <img class="img-responsive" src="./assets/ImagesNew/dd3.jpg" alt="">
-                      <div class="name_">
-                        <div class="img_con">
-                          <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                            <img class="star_" src="./assets/ImagesNew/star.png" alt="">
-                        </div>
-                        <p class="slide_name1">Michael Johnson3</p>
-                        <p style="font-size: 14px;" class="slide_name2">Janet Cosmetics</p>
-                      </div>
-                    </span>
-                    
-                </ol>
-                
 
-                
-                  <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></a>
-                  <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></a>
-              </div>
-          </div>
-      </div>
-    
-  </div>
-  </section> -->
   <!-- 10TH SECTION -->
   <section class="accept_payment_section">
     <div class="container">
@@ -990,29 +726,7 @@
       <div>
         <h2 class="ninthsec__ourpartners_heading">Brands & authorities that have valued us!</h2>
       </div>
-      <!-- <div class="thirdsec__app_features ninthsec__ourpartners_flex">
-        <div class="thirdsec__feature ninthsec__our_partners__logo">
-          <img src="./assets/Images/partner1.png" alt="partner-logo" class="thirdsec__feature_icon">
-        </div>
-
-        <div class="thirdsec__feature ninthsec__our_partners__logo">
-          <img src="./assets/Images/partner2.png" alt="partner-logo" class="thirdsec__feature_icon">
-        </div>
-
-        <div class="thirdsec__feature ninthsec__our_partners__logo">
-          <img src="./assets/Images/partner3.png" alt="partner-logo" class="thirdsec__feature_icon">
-        </div>
-        <div class="thirdsec__feature ninthsec__our_partners__logo">
-          <img src="./assets/Images/client4.png" alt="partner-logo" class="thirdsec__feature_icon">
-        </div>
-
-        <div class="thirdsec__feature ninthsec__our_partners__logo">
-          <img src="./assets/Images/client2.png" alt="partner-logo" class="thirdsec__feature_icon">
-        </div>
-      </div> -->
       <div class="row mt-2">
-        <!-- <div class="col-md-1">
-        </div> -->
         <div class="col-md-1 mx-auto text-center">
           <img src="./assets/ImagesNew/brands/ezcash.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
         </div>
@@ -1294,44 +1008,6 @@
       </div>
     </div>
   </div>
-
-
-
-<!--
-  <div id="popupBanner" class="popup-banner">
-    <div class="row" style="margin: 0;">
-      <div class="col-md-5"></div>
-      <div class="col-md-7 right_setup_popup">
-        <span id="closeBtn" class="popup-close"><i class="fa fa-times-circle-o" aria-hidden="true"></i></span>
-        <h4 class="pop_head mt-4">Subscribe Onepay for notify<br> future Updates and offers.</h4>
-        <p class="pop_text mt-3">Follow us now to get exclusive updates delivered straight to your inbox.</p>
-        <div class="row ">
-          <div class="col-12 mt-4">
-            <div class="btn_pp">
-              <input class="pop_input" type="text"id="emailInput" name="fname" placeholder="Write your email address">
-              <div class="btn-pop" onclick="subscribe()">
-                Subscribe
-              </div>
-          </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="whatsapp_div">
-              <img src="./assets/ImagesNew/whatsapp.png" alt="partner-logo" class="whatsapp_image">
-             
-              <span class="whatsapp_text" id="whatsappLink"> Join with WhatsApp Channel</span>
-
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
--->
-
 <div id="popupBanner" class="popup-banner">
   <div class="row" style="margin: 0;">
     <div class="col-md-5 pop_bac"></div>
@@ -1367,7 +1043,7 @@
     </div>
   </div>
 </div>
-
+<!-- <script src="./script.js"></script> -->
 <script>
   $(document).ready(function() {
     $("#subscribeBtn").click(function() {
@@ -1480,99 +1156,8 @@
 
 
   <!-- FOOTER SECTION -->
-  <footer class="footer">
-    <div class="container footer__top">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
-                <img src="./assets/Images/onepay-logo.png" alt="onepay-logo" class="footer__logo">
-                <p class="footer__paragraph">Onepay is an intellectual property of Spemai (PVT) Ltd, a company incorporated and duly registered under the laws and regulations of Sri Lanka and is governed by Central Bank of Sri Lanka. <br> PV Number PV00206829</p>
-
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
-                <h3 class="footer__links_heading">Links</h3>
-                <div><a href="./aboutus.html" class="footer_a_tag">About Us</a></div>
-                <div><a href="/user_terms.pdf" download class="footer_a_tag">User Terms & Conditions</a></div>
-                <div><a href="./agreement.html"  class="footer_a_tag" target="_blank">Merchant Terms & Conditions</a></div>
-                <div><a href="https://privacy-onepay.spemai.com/" class="footer_a_tag">Privacy Policy</a></div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 footer__top-section">
-                <h3 class="footer__links_heading">Contact us</h3>
-                <p class="footer__paragraph">3rd Floor, 292,Richmond House, <br> Gamsabha Junction,High Level Road,
-                    <br>
-                    Nugegoda, Sri Lanka. </p>
-                <a href="tel:+94 11 7 021 540" class="footer__paragraph">+94 76 052 3025</a> <br>
-                <a href="tel:+94 11 702 1540" class="footer__paragraph">+94 11 702 1540</a>
-
-            </div>
-            <div class="col-lg-2 col-md-6 col-sm-12 footer__top-section">
-                <h3 class="footer__links_heading">Download</h3>
-                <div class="footer-logo-section">
-                    <div>
-                      <img onclick="location.href=`https://apps.apple.com/jp/app/onepay/id1499761738`" src="./assets/SVG/download-apple.svg" alt="appstore-download">
-                      <img onclick="location.href=`https://play.google.com/store/apps/details?id=lk.onepay.android`" src="./assets/SVG/download-google.svg" alt="playstore-download">
-                      <img
-                        style="width: 119px; height: auto; margin: 7px 0;"
-                        onclick="location.href=`https://appgallery.cloud.huawei.com/ag/n/app/C103102119?locale=en_US&source=appshare&subsource=C103102119&shareTo=com.huawei.email&shareFrom=appmarket`" 
-                        src="./assets/Images/huawei-play-badge.png" alt="huawei-app-gallery-download" />
-                    </div>
-
-                    <ul class="footer-socialmedia">
-                        <li class="footer-socialmedia__item">
-                            <a href="https://www.facebook.com/onepayforall" class="footer-socialmedia__item-link"><img
-                                    src="./assets/Images/facebook.png" alt="socialmedia-logo"></a>
-                        </li>
-                        <li class="footer-socialmedia__item">
-                            <a href="https://www.instagram.com/onepaylk/" class="footer-socialmedia__item-link"><img
-                                    src="./assets/Images/instagram.png" alt="socialmedia-logo"></a>
-                        </li>
-                        <li class="footer-socialmedia__item">
-                            <a href="https://twitter.com/onepaylk" class="footer-socialmedia__item-link"><img src="./assets/Images/twitter.png"
-                                    alt="socialmedia-logo"></a>
-                        </li>
-                        <li class="footer-socialmedia__item">
-                            <a href="https://www.linkedin.com/company/onepaylk/?trk=similar-pages&originalSubdomain=lk" class="footer-socialmedia__item-link"><img
-                                    src="./assets/Images/linkedin.png" alt="socialmedia-logo"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="footer__copyright_text">
-        <div class="footer__horizontal_line"></div>
-        <p class="footer__copyrigh_paragraph">© 2024 Copyright by Onepay. All rights reserved.</p>
-    </div>
-</footer>
-
-
-
-
-
-
-  <script>
-    // Fetch and inject footer content
-    fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('footer').innerHTML = data;
-        })
-        .catch(error => console.error('Error fetching footer:', error));
-</script>
-
-
-  <!-- Optional JavaScript; choose one of the two! -->
-
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
-    integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <div id="footer"></div>
+  <!-- <iframe style="border: none;width: 100%;" id="footer-iframe" src="footer.html"></iframe> -->
   <script>
     $('.slider-main').slick({
       centerMode: true,
@@ -1628,13 +1213,11 @@
       const popupBanner = document.getElementById("popupBanner");
       popupBanner.style.display = "block";
     }
-  
     // Function to hide the popup banner
     function hidePopup() {
       const popupBanner = document.getElementById("popupBanner");
       popupBanner.style.display = "none";
     }
-  
     // Automatically show the popup after 3 seconds
     setTimeout(showPopup, 3000);
   
@@ -1652,7 +1235,6 @@
     document.addEventListener('DOMContentLoaded', function() {
         var whatsappLink = document.getElementById('whatsappLink');
         whatsappLink.addEventListener('click', function() {
-            // Replace the 'your_whatsapp_channel_link' with your actual WhatsApp channel link
             var whatsappChannelLink = 'https://www.whatsapp.com/channel/0029VaQ6DyiISTkMMtCSHD05';
             window.open(whatsappChannelLink);
         });
@@ -1669,14 +1251,6 @@
 
   gtag('config', 'G-Q5VM51P5MX');
 </script>
-
-
-
-  <!-- Option 2: Separate Popper and Bootstrap JS -->
-  <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
 </body>
 
 </html>
