@@ -71,6 +71,20 @@ body {
   width: 50px;
 }
 
+.nav-link.active {
+  border-bottom: 2px solid #67b868;
+  color: #67b868!important;
+}
+.nav-item-custom.active{
+  color: #67b868!important;
+}
+.new_line.active{
+  width: 50px;
+  height: 1px;
+  color: #67b868;
+}
+
+
 @media only screen and (max-width: 1023px) {
   .active-page::after {
     display: none;

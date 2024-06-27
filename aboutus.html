@@ -1,25 +1,46 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden;">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
-    <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
-    <title>Onepay - About Us</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86">
+  <link rel="shortcut icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/Images/favicon.ico" type="image/x-icon">
+  <!-- <title>Sri Lanka's trusted Online Payment Gateway Service</title>
+  <meta property="og:image" content="./assets/ImagesNew/512.jpg">
+  <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta property="og:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="twitter:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="description"
+    content="Get paid online quickly, securely & globally with Sri Lanka's secured payment gateway with ISO 27001. OnePay helps over 3000 businesses in Sri Lanka.">
+  <meta name="keywords"
+    content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
 
-    <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
-    <meta property="og:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
-    <meta name="twitter:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
-    <meta name="description"
-        content="Get paid online quickly, securely & globally with Sri Lanka's secured payment gateway with ISO 27001. OnePay helps over 3000 businesses in Sri Lanka.">
-    <meta name="keywords"
-        content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
-    <meta name="author" content="Onepay Sri Lanka">
-    <!-- Local CSS and JS files -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <meta name="author" content="Onepay Sri Lanka"> -->
+  <meta name="title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta property="og:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta property="og:url" content="https://www.onepay.lk">
+  <meta name="twitter:title" content="Sri Lanka's trusted Online Payment Gateway Service" />
+  <meta name="description"
+    content="Get paid online quickly, securely & globally with Sri Lanka's secured payment gateway with ISO 27001. OnePay helps over 3000 businesses in Sri Lanka.">
+  <meta name="keywords"
+    content="OnePay, payment gateway, Sri Lanka, online payments, trusted payment service, secure transactions, e-commerce, online business, digital payments, reliable payment gateway, top payment solution, fast payments, seamless transactions, best payment processor, merchant services, card payments, internet banking, mobile payments, online invoicing, payment security, fraud protection, PCI DSS compliant, payment integration, payment solutions provider, best payment gateway in Sri Lanka, ipg in sri lanka, sri lanka's payment gateway, online payment acceptance, electronic payment acceptance, online payment accepted here logo, online payment accepted here, worldline online payment acceptance, what is payment acceptance, online pavment methods in sri lanka, online payment gateway example, online payment gateway sri lanka, pay here, payhere, web pay, webx, webxpay">
+
+  <meta name="author" content="Onepay Sri Lanka">
+  <meta property="og:image" content="https://onepay-web.s3.ap-southeast-1.amazonaws.com/assets/ImagesNew/512.jpg">
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var metaUrl = document.createElement('meta');
+        metaUrl.setAttribute('property', 'og:url');
+        metaUrl.setAttribute('content', window.location.href);
+        document.getElementsByTagName('head')[0].appendChild(metaUrl);
+    });
+</script>
+
+   <!-- Local CSS and JS files -->
+   <link href="./css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" href="./css/slick-theme.min.css">
    <link rel="stylesheet" href="./css/slick.min.css">
    <link rel="stylesheet" href="./css/font-awesome.min.css">
@@ -30,95 +51,1145 @@
    <script src="./js/slick.min.js"></script>
    <script src="./script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
-
-
+ 
 </head>
 
+<style>
+  @media (max-width: 768px) {
+    .navbar>.container{
+      display: block!important;
+    }
+    .menu_ii{
+      float: right!important;
+    }
+    .icon_img{
+    height: 50px;
+    }
+    .navbar-toggler-icon{
+      font-size: large;
+    }
+    .news-card__link{
+      display: contents;
+    }
+}
+</style>
+
+<script>
+  function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    if (/windows phone/i.test(userAgent)) {
+      var a = document.getElementById('myElementID');
+      a.href = "http://www.mywebsite.com";
+      return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+      return "Android";
+    }
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+      return "iOS";
+    }
+
+    return "unknown";
+  }
+  // subscribe funcion 
+
+  function subscribe2() {
+  var email = document.getElementById("emailInput").value;
+  console.log(email)
+  if (email.trim() === "") {
+    alert("Please enter your email address.");
+    return;
+  }
+   var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+  var data = JSON.stringify({
+    "customer_email": email
+  });
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      console.log(this.responseText); 
+      hidePopup();
+      alert("Subscription successful!");
+    }
+  });
+  xhr.open("POST", "https://merchant-api-live-v2.onepay.lk/api/events/event-subscribe/");
+  
+  // Set the Content-Type header
+  xhr.setRequestHeader("Content-Type", "application/json");
+
+  // Send the data to the backend service
+  xhr.send(data);
+}
+</script>
+
+
 <body>
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script src="./js/sdk_form.js"></script>
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                xfbml: true,
-                version: "v8.0",
-            });
-        };
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  
 
-        (function (d, s, id) {
-            var js,
-                fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        })(document, "script", "facebook-jssdk");
-    </script>
+  <script src="./js/sdk_form.js"></script>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v8.0",
+      });
+    };
 
-    <!-- Your Chat Plugin code -->
-    <div class="fb-customerchat" attribution="setup_tool" page_id="695949390851250" theme_color="#67b868"></div>
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+  </script>
+  <script>
+    (function () {
+  "use strict";
 
-    <!--nav bar-->
-    <span id="header"></span>
+  var carousels = function () {
+    $(".owl-carousel1").owlCarousel({
+      loop: true,
+      center: true,
+      margin: 0,
+      responsiveClass: true,
+      nav: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        680: {
+          items: 2,
+          nav: false,
+          loop: false
+        },
+        1000: {
+          items: 3,
+          nav: true
+        }
+      }
+    });
+  };
 
-    <!-- <section class="about-header-section"></section> -->
-    <section class="about-img-section">
-        <div class="container">
-            <div class="row">
-                <img src="./assets/Images/team_updated.jpg" alt="team-img" class="img-fluid about__img">
+  (function ($) {
+    carousels();
+  })(jQuery);
+})();
+
+  </script>
+  <!-- Your Chat Plugin code -->
+  
+  <div class="fb-customerchat" attribution="setup_tool" page_id="695949390851250" theme_color="#67b868"></div>
+  <!-- <iframe class="nav_iframe" style="border: none;width: 100%;" id="navebar-iframe" src="navbar.html">
+  </iframe>  -->
+  
+  <!-- hero section -->
+  <span id="header"></span>
+  
+
+  <!-- SECOND SECTION NEW -->
+  <section class="brands-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 mx-auto text-center">
+          <p class="brand_head">3000 +SMEs businesses growing with Onepay</p>
+          <div class="row mt-4">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/1.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/2.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/3.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/4.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/5.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/6.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/7.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/8.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/9.png" alt="phone-img" class="brand_image">
+            </div>
+            
+            <div class="col-md-1">
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/10.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-2 mx-auto text-center">
+              <img src="./assets/Images/Logos/11.png" alt="phone-img" class="brand_image">
+            </div>
+           
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/12.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/13.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/14.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/15.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/16.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/17.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1 mx-auto text-center">
+              <img src="./assets/Images/Logos/18.png" alt="phone-img" class="brand_image">
+            </div>
+            <div class="col-md-1">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!--  THIRD SECTION| APP FEATURES (fast,secure,etc) -->
+  <section class="feature-list--section">
+    <div class="container">
+      <p class="feature_head_text mt-5">Why Onepay ?</p>
+      <div class="app_features">
+
+        <div class="feature">
+          <div>
+            <img src="./assets/SVG/Heart 1.svg" alt="feature-icon" class="feature_icon">
+          </div>
+          <div>
+            <p class="feature_heading">User Friendly</p>
+          </div>
+          <div>
+            <p class="feature_text">OnePay is design specially <br>for consumer’s ease..</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div>
+            <img src="./assets/SVG/Beverly 1.svg" alt="feature-icon" class="feature_icon">
+          </div>
+          <div>
+            <p class="feature_heading">24/7 customer care</p>
+          </div>
+          <div>
+            <p class="feature_text">You won't be lost. we will <br>guide you every step <br>of the way.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div>
+            <img src="./assets/SVG/Bulb 1.svg" alt="feature-icon" class="feature_icon">
+          </div>
+          <div>
+            <p class="feature_heading">Fast Checkout experience</p>
+          </div>
+          <div>
+            <p class="feature_text">Within seconds,Your <br> desire will happen..</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div>
+            <img src="./assets/SVG/Bar Graph 1.svg" alt="feature-icon" class="feature_icon">
+          </div>
+          <div>
+            <p class="feature_heading">Convenient</p>
+          </div>
+          <div>
+            <p class="feature_text">Worry less and pay any <br> service anywhre, <br> anytime.</p>
+          </div>
+        </div>
+        <div class="feature">
+          <div>
+            <img src="./assets/SVG/Lock 1.svg" alt="feature-icon" class="feature_icon">
+          </div>
+          <div>
+            <p class="feature_heading">ISO 27001 Certified
+            </p>
+          </div>
+          <div>
+            <p class="feature_text">You Secuirty is our top <br> priority.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- FORTH SECTION -->
+  <section class="setup-section">
+    <div class="wrapper">
+      <div class="image_bac">
+        <div class="row" style="margin: 0;">
+          <div class="col-md-6"></div>
+          <div class="col-md-6 right_setup">
+           
+          <h2 class="secondsec__heading_small_text">How it Works?</h2>
+          <h2 class="secondsec__heading">Four Easy steps to setup your
+            OnePay Account.</h2>
+
+          <div class="secondsec__step">
+            <img src="./assets/SVG/register.svg" alt="register-icon">
+            <p class="secondsec__paragraph_text">Reach out to Onepay <span class="secondsec__paragraph_text--sub">Get in touch with a OnePay Specialist to discuss all your needs </span></p>
+          </div>
+
+          <div class="secondsec__step">
+            <img src="./assets/SVG/add-user-info.svg" alt="add-user-info-icon">
+            <p class="secondsec__paragraph_text">Submit all your documents<span class="secondsec__paragraph_text--sub"> Use email to send all your business documents</span></p>
+          </div>
+
+          <div class="secondsec__step">
+            <img src="./assets/SVG/Add Account Info.svg" alt="add-account-info-icon">
+            <p class="secondsec__paragraph_text">Get the deal signed<span class="secondsec__paragraph_text--sub">Onepay sent you an agreement to sign</span></p>
+          </div>
+
+          <div class="secondsec__step">
+            <img src="./assets/SVG/Validate Account.svg " alt="validate-account-icon">
+            <p class="secondsec__paragraph_text">Let's get started<span class="secondsec__paragraph_text--sub">The basic configuration is complete.</span></p>
+          </div> 
+
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- FIFTH SECTION -->
+  <section class="businessgrow-section">
+    <div class="container">
+      <div class="row mx-auto text-center">
+        <div class="col-12">
+          <h1 class="businessgrow_head">We help your business grow faster.</h1>
+          <p class="businessgrow_p_text">With Onepay, you can manage all your payments in one place, without any hassle.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="business_sec">
+            <div class="mb-4">
+              <img src="./assets/ImagesNew/paymentlink_image.png" alt="feature-icon" class="business_img">
+            </div>
+            <div>
+              <p class="business_sec_heading">Onepay Invoice</p>
+            </div>
+            <div>
+              <p class="business_sec_text">Using Onepay, businesses can create invoices and prompt clients to settle payments quickly. Get a handle on seamless payment acceptance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="business_sec">
+            <div class="mb-4">
+              <img src="./assets/ImagesNew/mgt_image.png" alt="feature-icon" class="business_img">
+            </div>
+            <div>
+              <p class="business_sec_heading">Onepay Payment link</p>
+            </div>
+            <div>
+              <p class="business_sec_text">A no-code payment link lets you accept payments anywhere in the world.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="business_sec">
+            <div class="mb-4">
+              <img src="./assets/ImagesNew/payment_image.png" alt="feature-icon" class="business_img">
+            </div>
+            <div>
+              <p class="business_sec_heading">Multiple user login <span style="color: red;font-size: 12px;">(Coming soon) </span></p>
+            </div>
+            <div>
+              <p class="business_sec_text">Onepay now allows organizations to streamline their workflow and organize roles and responsibilities more effectively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto text-center">
+        <div class="col-12">
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- 6TH SECTION -->
+  <section class="benefit_section">
+    <div class="container">
+      <div class="fifthsec__banner">
+        <div class="fithsec__banner_content">
+          <h3 class="fifthsec__banner_heading">Benefits & Features</h3>
+          <p class="fifthsec__banner_paragraph">Experience peace of mind with our secure internet payment gateway. Ironclad security, global reach, and user-friendly features empower your business. Trust us to safeguard your transactions and propel your success.</p>
+        </div>
+        <div class="fithsec__banner_btn_div">
+          <button class="fifthsec__banner_btn" onclick="location.href=`contactus.html`">Create a Sandbox
+            <!-- <img src="./assets/SVG/apple.svg" alt="apple-logo" class="fifthsec__banner_btn_svg">
+            <img src="./assets/SVG/home-android.svg" alt="android-logo">
+            <img src="./assets/SVG/huawei.svg" alt="huawei-logo" class="consumber-main__btn-logo3" style="width: 23px;"> -->
+          </button>
+        </div>
+        <div class="fifthsec__banner_vector">
+          <img src="./assets/SVG/banner_vector.svg" alt="vector-graphic">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7TH SECTION -->
+  <section class="accept_payment_section">
+    <div class="container">
+      <div class="row d-flex align-items-center consumer-feature-gap">
+        <div class="col-md-6 consumer-feature-section__first-col">
+            <h3 class="consumer-feature__title">Invoicing designed for rapidity and expansion</h3>
+            <p class="consumer-feature__para"> Onepay Invoicing stands as a worldwide invoicing software platform crafted to streamline your workflow and accelerate your payment process. Generate and dispatch invoices to your clientele within minutes, without the need for coding.
+            </p>
+            <div class="top-space btn-center-sm">
+                <a href="./contactus.html" class="btn-common">Apply Online
+                    <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                </a>
             </div>
         </div>
-    </section>
+        <div
+            class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker  consumer-feature__second-col">
+            <img src="./assets/ImagesNew/invoice_mac.png" alt="feature-img"
+                class="consumer-feature__img img-fluid">
+        </div>
+    </div>
+    </div>
+  </section>
 
-    <section class="ceo-msg-section">
-        <div class="container">
-            <h3 class="ceo-msg__title">Message From CEO 📃</h3>
-            <p class="ceo-msg__para">We work as hard as possible to make your lives easier.</p>
-            <div class="row">
-                <div class="col-md-5">
-                    <img src="./assets/Images/min/pp.jpg" alt="ceo-img" class="img-fluid ceo-mg__img">
-                </div>
-                <div class="col-md-7 ceo-msg-breaker">
-                    <h3 class="ceo-msg__name">Mr. Amila Fernando</h3>
-                    <p class="ceo-msg__description">Design creates culture. Culture shapes values. Values determine the
-                        future.”
-                        — Robert L. Peters, Graphic Designerm</p>
-                    <p class="ceo-msg__info">Amila Fernando brings in his visionary leadership, alongside 7 years of
-                        work
-                        experience with startups, marketing and business development in Japan. He
-                        was able to build a strong academic foundation for future innovations with
-                        the education he received from Nihon University College of Commerce in
-                        Japan. While he was an undergraduate, he has worked in the food and
-                        beverage industry gaining experience in handling innovative software
-                        services.
-                    </p>
-                    <p class="ceo-msg__info">Onepay was an idea put forth as a solution for a current social issue of
-                        having to go to a bank to make the payments manually. With the global
-                        pandemic, it was vital to maintain social distance. However, it has been
-                        quite a challenge in Sri Lanka to follow the protocol due to a lot of difficulties
-                        and issues in the current social system. Hence, the introduction of Onepay
-                        to help you with contactless payment making lives easier today and
-                        tomorrow.</p>
+  <!-- 8TH SECTION -->
+  <section class="accept_payment_section">
+    <div class="container">
+      <div class="row d-flex align-items-center consumer-feature-gap">
+        <div
+        class="col-md-6  align-items-center consumer-feature-breaker  consumer-feature__second-col">
+        <img src="./assets/ImagesNew/analytics.png" alt="feature-img"
+            class="consumer-feature__img img-fluid">
+    </div>
+        <div class="col-md-6 consumer-feature-section__first-col">
+            <h3 class="consumer-feature__title">Merchant Admin Panel</h3>
+            <p class="consumer-feature__para">All the merchants will receive a separate admin panel. This platform allows you to track the day-to-day business transactions, sales and expenses reports with charts while generating QR’s to request payments from the consumers among many other functions.</p>
+           <!--
+             <div class="top-space btn-center-sm">
+                <a href="./contactus.html" class="btn-common">View Details
+                    <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                </a>
+            </div>
+           -->
+        </div>
+       
+    </div>
+    </div>
+  </section>
+
+   <!-- TH SECTION -->
+   <section class="accept_payment_section">
+    <div class="container">
+      <div class="row d-flex align-items-center consumer-feature-gap">
+        <div class="col-md-6 consumer-feature-section__first-col">
+            <h3 class="consumer-feature__title">Streamlining payout details </h3>
+            <p class="consumer-feature__para">Your finance team now has a simplified process for viewing all payout details, whether it's for a day or a month, all accessible in a single view.</p>
+            <div class="top-space btn-center-sm">
+                <a href="./contactus.html" class="btn-common">Apply Online
+                    <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                </a>
+            </div>
+        </div>
+        <div
+            class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker  consumer-feature__second-col">
+            <img src="./assets/ImagesNew/payout_mac.png" alt="feature-img"
+                class="consumer-feature__img img-fluid">
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- 9TH SECTION -->
+  <section class="accept_payment_section" style="background-color: #F0F9F7;margin-bottom: 50px;padding-bottom: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="quote-carousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-8 offset-sm-2">
+                                    <h4 class="what_say">What Merchant say</h4>
+                                    <h4 class="what_about">About OnePay</h4>
+                                    <p>We recently got the service of One Pay to setup payment gateway service for our company Xtreme Tours & Travels (Pvt) Ltd.
+                                      Their service is highly appreciated and Dulan was very informative, friendly and vey helpful from begining to end through the process.
+                                      As an entrepreneur, finding a reliable and efficient payment gateway service was paramount, and I am thrilled to share my positive experience.
+                                      </p>
+                                    <small>Xtreme Tours & Travels (Pvt) Ltd</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-8 offset-sm-2">
+                                    <h4 class="what_say">What Merchant say</h4>
+                                    <h4 class="what_about">About OnePay</h4>
+                                    <p>Ahinsa Sewwandi has been a pleasure to deal with and has been so efficient and professional through my onboarding process.
+                                      Onepay is also working really well and we are happy we signed up with your company for our payment gateway requirements.
+                                      Thank you once again and special thanks to Ahinsa Sewwandi once again - keep up the great work and customer service.
+                                      Regards,
+                                      </p>
+                                    <small>Bunk At (PVT) Ltd & Bohemian Quest (PVT) Ltd</small>
+                                </div>
+                            </div>
+                        </div>
+                       
+
+                        <div class="carousel-item">
+                          <div class="row">
+                              <div class="col-sm-8 offset-sm-2">
+                                  <h4 class="what_say">What Merchant say</h4>
+                                  <h4 class="what_about">About OnePay</h4>
+                                  <p>Onepay is one of the most secure and trusted payment gateways in Sri Lanka so as a company they cater to all our clients and really appreciate their client support and rapid responsiveness via IMs, especially Mr.Dulanjana is an impressive character on client support wish you all the very best rest of the team
+                                    Операу!</p>
+                                  <small>Datawave IT Solutions (Pvt) Ltd</small>
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-sm-8 offset-sm-2">
+                                <h4 class="what_say">What Merchant say</h4>
+                                <h4 class="what_about">About OnePay</h4>
+                                <p>I've had the pleasure of using OnePay.Ik, a leading online payment gateway in Sri Lanka, and I must say, the experience has been nothing short of exceptional. The platform is user-friendly, secure, and efficient, making online transactions a breeze.
+                                  One aspect that truly sets OnePay.Ik apart is their outstanding customer service. In particular, I would like to commend their sales representative, Nimantha Jayasinghe, for his professionalism and dedication. Nimantha has consistently gone above and beyond to ensure a seamless experience for users. His knowledge of the platform and his ability to promptly address any concerns have greatly contributed to the positive experience I've had with OnePay.Ik.
+                                  </p>
+                                <small>Wimaladharma Brothers (pvt) Ltd</small>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </div>
+                  
+                     <ol class="carousel-indicators">
+                      <span   data-bs-target="#quote-carousel" data-bs-slide-to="0" class="active image_mm">
+                       
+                        <img class="img-responsive" src="./assets/Images/min/customer.png" alt="">
+                        <span>
+                          <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        </span>
+                        <br>
+                        <span>
+                          <span  class="slide_name2">Mayantha Maduranga</span>     
+                          <br>
+                          <span class="slide_name1"  class="slide_name2">Director - Xtreme Tours & Travels (Pvt) Ltd</span>
+                          <br>                 
+                        </span>
+                      </span>
+                      <span data-bs-target="#quote-carousel" data-bs-slide-to="1" class="image_mm">
+                        <img class="img-responsive" src="./assets/Images/min/customer.png" alt="">
+                        <span>
+                          <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        </span>
+                        <br>
+                        <span>
+                          <span  class="slide_name2">Sidath Dharmapala</span>     
+                          <br>
+                          <span class="slide_name1"  class="slide_name2">Director - Bohemian Quest (PVT) Ltd</span>
+                          <br>                 
+                        </span>
+                      </span>
+
+                      <span data-bs-target="#quote-carousel" data-bs-slide-to="2" class="image_mm">
+                        <img class="img-responsive" src="./assets/Images/min/customer.png" alt="">
+                        <span>
+                          <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        </span>
+                        <br>
+                        <span>
+                          <span  class="slide_name2">Director</span>     
+                          <br>
+                          <span class="slide_name1"  class="slide_name2">Datawave IT Solutions (Pvt) Ltd</span>
+                          <br>                 
+                        </span>
+                      </span>
+
+                      <span data-bs-target="#quote-carousel" data-bs-slide-to="3" class="image_mm">
+                        <img class="img-responsive" src="./assets/Images/min/customer.png" alt="">
+                        <span>
+                          <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        <img class="star_" src="./assets/ImagesNew/star.png" alt="">
+                        </span>
+                        <br>
+                        <span>
+                          <span  class="slide_name2">Panduka Wimaladharma</span>     
+                          <br>
+                          <span class="slide_name1"  class="slide_name2">Wimaladharma Brothers (PVT) Ltd</span>
+                          <br>                 
+                        </span>
+                      </span>
+
+                      
+                      
+                  </ol> 
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#quote-carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#quote-carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+  <!-- 10TH SECTION -->
+  <section class="accept_payment_section">
+    <div class="container">
+      <div class="row d-flex align-items-center consumer-feature-gap">
+        <div class="col-md-6 consumer-feature-section__first-col">
+            <h3 class="consumer-feature__title">Grow Your Business Around the World</h3>
+            <p class="consumer-feature__para">OnePay provides a comprehensive dashboard for efficiently managing all your payments from a single platform. Wherever you are, you have worldwide access to the dashboard.</p>
+            <div class="top-space btn-center-sm">
+                <a href="./contactus.html" class="btn-common">Apply Onlone
+                    <img src="./assets/SVG/arrow-right-s-line.svg" alt="arrow-icon" class="btn-common__arrow">
+                </a>
+            </div>
+        </div>
+        <div
+            class="col-md-6 d-flex justify-content-end align-items-center consumer-feature-breaker  consumer-feature__second-col">
+            <img src="./assets/ImagesNew/seamless.png" alt="feature-img"
+                class="consumer-feature__img img-fluid">
+        </div>
+    </div>
+    </div>
+  </section>
 
 
-    <!-- FOOTER SECTION -->
-    <div id="footer"></div>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VM51P5MX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <section class="our-clients__section">
+    <div class="container">
+      <div>
+        <h2 class="ninthsec__ourpartners_heading">Brands & authorities that have valued us!</h2>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-1 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/ezcash.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-1 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/cargills.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-1 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/hnb.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-2 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/ntb.jpeg"  alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-1 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/frimi.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-1 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/mcash.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-2 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/sampath.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
+        <div class="col-md-1 mx-auto text-center">
+          <img src="./assets/ImagesNew/brands/just pay.jpeg" alt="partner-logo" class="thirdsec__feature_icon">
+        </div>
 
-        gtag('config', 'G-Q5VM51P5MX');
-    </script>
+        
+        <!-- <div class="col-md-1">
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 12TH SECTION -->
+  <section class="common-faq-section">
+    <div class="container">
+        <h3 class="common-faq__title">FAQs</h3>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="faq-scroll">
+                    <div class="px-3">
+                        <div class="common-accordion" id="accordionExample">
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingOne">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Who can connect with One Pay services? 
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        Any small, medium and large-scale business entitities and professional service providers can easily access the Onepay payment gateway at a nominal setup cost. Please read Application Process on how to apply. 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingTwo">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        What's the cost to integrate the payment gateway to my business?
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        A nominal rate of Rs. 1,500 is applied when setting-up your Onepay business account and a recurrent subscription fee based on the plan you select. 
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingThree">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Can I scale my packages as my business grows? 
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingThree"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        Ofcourse. You have the flexibility to switch between packages as you deem fit for your business.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingfour">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                        What currency payments can be made through the Onepay payment gateway?  
+                                    </button>
+                                </h2>
+                                <div id="collapsefour" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingfour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        As of now, LKR and USD payments are accepted.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingfive">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                        What are the payment methods available on Onepay?
+                                    </button>
+                                </h2>
+                                <div id="collapsefive" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingfive"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        Debit/Credit Payments (VISA, Mastercard, AMEX, Diner's Club & Discover), Mobile wallet payments (Ez Cash & mCash) and Internet Banking payment methods are currently available. More methods will follow with future developments.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingsix">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapssix" aria-expanded="true" aria-controls="collapseOne">
+                                        Do I have to have a website?
+                                    </button>
+                                </h2>
+                                <div id="collapssix" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingsix"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        Not necessarily. You can use the Onepay Pay Link method to collect payments from your customers without a website.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingseven">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseseven" aria-expanded="false" aria-controls="collapseTwo">
+                                        Does One Pay offer Automated payments or Tokenization?
+                                    </button>
+                                </h2>
+                                <div id="collapseseven" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingseven"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        Yes. We do support Automated payments (tokenization) & manage the Pre-approvals for you.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="common-accordion-item">
+                                <h2 class="common-accordion-header" id="headingeight">
+                                    <button class="accordion-button common-accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseeight" aria-expanded="false" aria-controls="collapseThree">
+                                        How long does it take for me to receive the funds to my account?
+                                    </button>
+                                </h2>
+                                <div id="collapseeight" class="accordion-collapse collapse common-accordion-collapse" aria-labelledby="headingeight"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="common-accordion-body">
+                                        All payments are settled every 2 working days. 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-5 d-flex align-items-center justify-content-center">
+                <div class="question-content">
+                    <img src="./assets/SVG/faq-telephone.svg" alt="telephone-img" class="question-content__img">
+                    <h3 class="question-content__title">Have more questions?</h3>
+                    <p class="question-content__para">Let us know and our experts will get in touch with you ASAP.</p>
+                    <a href="tel:+94 11 7 021 540" class="question-content__link">Talk to our experts</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <div class="news-section">
+    <div class="container">
+      <h3 class="news-sec-title">Stay tuned with the latest updates!</h3>
+    </div>
+    <div class="row news-card-row slider-main">
+      <div class="news-card">
+        <img src="./assets/Images/min/image_29be2a5fed.jpg" alt="news-img" class="news-card__img">
+        <div class="news-card__body">
+          <p class="news-card__para">Onepay becomes Sri Lanka’s first payment gateway to be ISO-certified</p>
+          <div class="news-card__btn">
+            <a href="https://www.ft.lk/financial-services/Onepay-becomes-Sri-Lanka-s-first-payment-gateway-to-be-ISO-certified/42-731325"
+              class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line"
+                class="news-card__icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/Images/Onepay-PG-Logo.png" alt="news-img" class="news-card__img">
+        <div class="news-card__body">
+          <p class="news-card__para">Onepay becomes Sri Lanka’s first payment gateway to be ISO-certified</p>
+          <div class="news-card__btn">
+            <a href="https://island.lk/onepay-becomes-sri-lankas-first-payment-gateway-to-be-iso-certified/"
+              class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line"
+                class="news-card__icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/Images/min/26-Spemai.jpg" alt="news-img" class="news-card__img">
+        <div class="news-card__body">
+          <p class="news-card__para">Spemai launches Onepay payment gateway</p>
+          <div class="news-card__btn">
+            <a href="http://www.sundayobserver.lk/2021/08/29/business/spemai-launches-onepay-payment-gateway"
+              class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line"
+                class="news-card__icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/Images/news-img-4.png" alt="news-img" class="news-card__img">
+        <div class="news-card__body">
+          <p class="news-card__para">SL startup acquires Japanese investment, launches Onepay payment gateway</p>
+          <div class="news-card__btn">
+            <a href="https://island.lk/sl-startup-acquires-japanese-investment-launches-onepay-payment-gateway/"
+              class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line"
+                class="news-card__icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/Images/min/token.jpg" alt="news-img" class="news-card__img">
+        <div class="news-card__body">
+          <p class="news-card__para">Onepay receives an honorary token of appreciation</p>
+          <div class="news-card__btn">
+            <a href="https://www.facebook.com/watch/?v=3378866198871479" class="news-card__link">Read More <img
+                src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line" class="news-card__icon"></a>
+          </div>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="./assets/Images/min/hnb.jpg" alt="news-img" class="news-card__img">
+        <div class="news-card__body">
+          <p class="news-card__para">HNB partners with Onepay expanding e-commerce solution for SME’s</p>
+          <div class="news-card__btn">
+            <a href="https://www.hnb.net/media-center/2022/hnb-partners-with-onepay-expanding-e-commerce-solution-for-sme%E2%80%99s?fbclid=IwAR0qMyCVq0Wu8U1m24axDb_gPl1LB3XpIGSkpqCQkT27pMyKdNrB75oN4AI"
+              class="news-card__link">Read More <img src="./assets/SVG/arrow-right-line.svg" alt="arrow-right-line"
+                class="news-card__icon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div id="popupBanner" class="popup-banner">
+  <div class="row" style="margin: 0;">
+    <div class="col-md-5 pop_bac"></div>
+    <div class="col-md-7 right_setup_popup">
+      <span id="closeBtn" class="popup-close"><i class="fa fa-times-circle-o" aria-hidden="true"></i></span>
+      <h4 class="pop_head mt-4">Subscribe Onepay for notify<br> future Updates and offers.</h4>
+      <p class="pop_text mt-3">Follow us now to get exclusive updates delivered straight to your inbox.</p>
+      <div class="row">
+        <div class="col-12 mt-4">
+          <div class="btn_pp">
+            <input class="pop_input" type="text" id="emailInput" name="fname" placeholder="Write your email address">
+            
+            <div class="btn-pop" id="subscribeBtn">
+              Subscribe
+            </div>
+            
+          </div>
+
+          <!-- Error and warning messages -->
+          <span id="emailError" style="color: red;"></span>
+          <span id="emailWarning" style="color: rgb(255, 255, 255);"></span>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="whatsapp_div">
+            <img src="./assets/ImagesNew/whatsapp.png" alt="partner-logo" class="whatsapp_image">
+            <span class="whatsapp_text" id="whatsappLink"> Join with WhatsApp Channel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script src="./script.js"></script> -->
+<script>
+  $(document).ready(function() {
+    $("#subscribeBtn").click(function() {
+      // Reset error and warning messages
+      $("#emailError").text("");
+      $("#emailWarning").text("");
+      
+      // Get the email address from the input field
+      var email = $("#emailInput").val();
+      
+      // Check if the email address is not empty
+      if ($.trim(email) === "") {
+        $("#emailError").text("Please enter your email address.");
+        return;
+      }
+      
+      // Validate the email address format
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        $("#emailError").text("Please enter a valid email address.");
+        return;
+      }
+      
+      // Create the data object
+      var data = JSON.stringify({
+        "customer_email": email
+      });
+  
+      // Send the data to the backend service
+      $.ajax({
+        type: "POST",
+        url: "https://merchant-api-live-v2.onepay.lk/api/events/event-subscribe/",
+        data: data,
+        contentType: "application/json",
+        success: function(response) {
+          console.log(response); // Log the response from the server
+         // alert("Subscription successful!"); // You can show a success message here
+          $("#emailError").text("Subscription successful!");
+          hidePopup();
+        },
+        error: function(xhr, status, error) {
+          console.error(xhr.responseText); // Log the error response from the server
+          alert("An error occurred. Please try again later."); // You can show an error message here
+        }
+      });
+    });
+  
+
+
+  ///  subscribe news letter 001 
+
+  $("#subscribeBtn_01").click(function() {
+      // Reset error and warning messages
+      $("#emailError_01").text("");
+      $("#emailWarning_01").text("");
+      
+      // Get the email address from the input field
+      var email = $("#newsletter_field").val();
+      
+      // Check if the email address is not empty
+      if ($.trim(email) === "") {
+        $("#emailError_01").text("Please enter your email address.");
+        return;
+      }
+      
+      // Validate the email address format
+      var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        $("#emailError_01").text("Please enter a valid email address.");
+        return;
+      }
+      
+      // Create the data object
+      var data = JSON.stringify({
+        "customer_email": email
+      });
+  
+      // Send the data to the backend service
+      $.ajax({
+        type: "POST",
+        url: "https://merchant-api-live-v2.onepay.lk/api/events/event-subscribe/",
+        data: data,
+        contentType: "application/json",
+        success: function(response) {
+          console.log(response); // Log the response from the server
+         // alert("Subscription successful!"); // You can show a success message here
+          $("#emailWarning_01").text("Subscription successful!");
+          hidePopup();
+        },
+        error: function(xhr, status, error) {
+          console.error(xhr.responseText); // Log the error response from the server
+          alert("An error occurred. Please try again later."); // You can show an error message here
+        }
+      });
+    });
+  
+
+
+  });
+  </script>
+  <!-- FOOTER SECTION -->
+  <div id="footer"></div>
+  <!-- <iframe style="border: none;width: 100%;" id="footer-iframe" src="footer.html"></iframe> -->
+  <script>
+    $('.slider-main').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 4,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            arrows: false,
+            centerMode: true,
+            centerPadding: '40px',
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 10) {
+        $('.custom-nav__modify').addClass('floatingNav');
+      } else {
+        $('.custom-nav__modify').removeClass('floatingNav');
+      }
+    });
+  </script>
+  <script>
+    // Function to show the popup banner
+    function showPopup() {
+      const popupBanner = document.getElementById("popupBanner");
+      popupBanner.style.display = "block";
+    }
+    // Function to hide the popup banner
+    function hidePopup() {
+      const popupBanner = document.getElementById("popupBanner");
+      popupBanner.style.display = "none";
+    }
+    // Automatically show the popup after 3 seconds
+    setTimeout(showPopup, 3000);
+  
+    // Close button functionality
+    const closeBtn = document.getElementById("closeBtn");
+    closeBtn.addEventListener("click", hidePopup);
+  </script>
+  <script>
+    
+    
+  </script>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var whatsappLink = document.getElementById('whatsappLink');
+        whatsappLink.addEventListener('click', function() {
+            var whatsappChannelLink = 'https://www.whatsapp.com/channel/0029VaQ6DyiISTkMMtCSHD05';
+            window.open(whatsappChannelLink);
+        });
+    });
+</script>
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5VM51P5MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q5VM51P5MX');
+</script>
 </body>
 
 </html>
