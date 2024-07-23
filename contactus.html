@@ -26,12 +26,44 @@
   <link rel="stylesheet" href="./css/slick.min.css">
   <link rel="stylesheet" href="./css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <script src="./js/jquery-3.7.1.min.js"></script>
   <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/slick.min.js"></script>
   <script src="./script.js"></script>
- <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <!-- <script>
+  function loadNavbar() {
+      fetch('header.html')
+          .then(response => response.text())
+          .then(data => {
+              document.getElementById('header').innerHTML = data;
+              setActiveLink();
+          });
+  }
+  function setActiveLink() {
+      const navLinks = document.querySelectorAll('.nav-link');
+      const activeLink = localStorage.getItem('activeLink');
+      navLinks.forEach(link => {
+          link.addEventListener('click', function (event) {
+              event.preventDefault();
+              localStorage.setItem('activeLink', this.getAttribute('href'));
+              navLinks.forEach(nav => nav.classList.remove('active'));
+              this.classList.add('active');
+              window.location.href = this.getAttribute('href');
+          });
+
+          if (link.getAttribute('href') === activeLink) {
+              link.classList.add('active');
+          } else {
+              link.classList.remove('active');
+          }
+      });
+  }
+  document.addEventListener('DOMContentLoaded', loadNavbar);
+</script> -->
 
 
 </head>
@@ -65,36 +97,7 @@
   <!--nav bar-->
 
   <span id="header"></span>
-  <!-- <script>
-    function loadNavbar() {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-                setActiveLink();
-            });
-    }
-    function setActiveLink() {
-        const navLinks = document.querySelectorAll('.nav-link');
-        const activeLink = localStorage.getItem('activeLink');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
-                localStorage.setItem('activeLink', this.getAttribute('href'));
-                navLinks.forEach(nav => nav.classList.remove('active'));
-                this.classList.add('active');
-                window.location.href = this.getAttribute('href');
-            });
 
-            if (link.getAttribute('href') === activeLink) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    }
-    document.addEventListener('DOMContentLoaded', loadNavbar);
-</script> -->
 
 
   <!-- CONTACT PAGE HEADER SECTION -->

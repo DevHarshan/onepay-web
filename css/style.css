@@ -832,7 +832,7 @@ body {
 }
 
 .footer-socialmedia__item:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 11px;
 }
 
 .footer-socialmedia__item-link {
@@ -3119,6 +3119,33 @@ p.subscriptionDetails {
 /* footer */
 #footer-iframe{
   height: 95vh;
+}
+/* index slider */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+  width: 100%;    /* Ensures the image takes full width of its container */
+  height: auto;   /* Maintains the aspect ratio of the image */
+  object-fit: contain;  /* Ensures the entire image is contained within its container */
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide {
+  width: calc(100% / 8 - 25px); /* 100% divided by the number of images minus spaceBetween */
 }
 
 

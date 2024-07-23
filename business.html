@@ -32,6 +32,36 @@
     <script src="./js/slick.min.js"></script>
     <script src="./script.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <!-- <script>
+        function loadNavbar() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                    setActiveLink();
+                });
+        }
+        function setActiveLink() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const activeLink = localStorage.getItem('activeLink');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    localStorage.setItem('activeLink', this.getAttribute('href'));
+                    navLinks.forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+                    window.location.href = this.getAttribute('href');
+                });
+    
+                if (link.getAttribute('href') === activeLink) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', loadNavbar);
+    </script> -->
 
 </head>
 
@@ -63,36 +93,7 @@
     <!-- Your Chat Plugin code -->
     <div class="fb-customerchat" attribution="setup_tool" page_id="695949390851250" theme_color="#67b868"></div>
     <span id="header"></span>
-    <!-- <script>
-        function loadNavbar() {
-            fetch('header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header').innerHTML = data;
-                    setActiveLink();
-                });
-        }
-        function setActiveLink() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            const activeLink = localStorage.getItem('activeLink');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    localStorage.setItem('activeLink', this.getAttribute('href'));
-                    navLinks.forEach(nav => nav.classList.remove('active'));
-                    this.classList.add('active');
-                    window.location.href = this.getAttribute('href');
-                });
-
-                if (link.getAttribute('href') === activeLink) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
-        document.addEventListener('DOMContentLoaded', loadNavbar);
-    </script> -->
+    
 
     <!-- CONTACT PAGE HEADER SECTION -->
     <section class="business-header">
